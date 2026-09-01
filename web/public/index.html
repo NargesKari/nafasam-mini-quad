@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Drone Control</title>
+  <style>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
+    html, body {
+      margin: 0; height: 100%; height: 100dvh; background: #111; color: #eee;
+      font-family: -apple-system, sans-serif; overflow: hidden; touch-action: none;
+    }
+    #app {
+      padding-left: max(8px, env(safe-area-inset-left));
+      padding-right: max(8px, env(safe-area-inset-right));
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    #rotateOverlay {
+      display: none; position: fixed; inset: 0; background: #111;
+      z-index: 100; align-items: center; justify-content: center;
+      flex-direction: column; text-align: center; padding: 20px;
+    }
+    #rotateOverlay .icon { font-size: 48px; margin-bottom: 12px; }
+    @media (orientation: portrait) {
+      #rotateOverlay { display: flex; }
+      #app { display: none; }
+    }
+
+    #topBar {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 8px; font-size: 14px;
+    }
+    #statusDot {
+      width: 10px; height: 10px; border-radius: 50%; background: #e57373;
+      transition: background 0.2s;
+    }
+    #statusDot.connected { background: #4caf50; }
+
+    #app { height: 100%; display: flex; flex-direction: column; }
+    .main-row {
+      flex: 1; display: flex; justify-content: space-between; align-items: center;
+      padding: 0 clamp(8px, 3vw, 20px);
+      padding-left: max(clamp(8px, 3vw, 20px), env(safe-area-inset-left));
+      padding-right: max(clamp(8px, 3vw, 20px), env(safe-area-inset-right));
+      min-width: 0;
+    }
+    .stick-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .label { font-size: 10px; color: #888; margin-bottom: 4px; }
+    .joystick {
+      width: clamp(90px, 26vh, 140px);
+      height: clamp(90px, 26vh, 140px);
+      border-radius: 50%;
+      background: #222; border: 2px solid #444;
+      position: relative; touch-action: none;
+    }
+    .knob {
+      width: 42%; height: 42%; border-radius: 50%;
+      background: #4a90d9; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .center-controls {
+      display: flex; flex-direction: column; align-items: center; gap: clamp(4px, 1.5vh, 10px);
+      flex-shrink: 1; min-width: 0;
+    }
+    #telemetry {
+      font-size: 10px; color: #aaa; text-align: left; line-height: 1.5;
+      background: #1a1a1a; padding: 6px 10px; border-radius: 6px; min-width: 90px;
+    }
+    #telemetry span { color: #4a90d9; }
+
+    #killBtn {
+      width: clamp(60px, 16vh, 90px); height: clamp(60px, 16vh, 90px);
+      border-radius: 50%;
+      background: #b71c1c; color: #fff; border: 3px solid #e57373;
+      font-size: clamp(9px, 2.2vh, 12px); font-weight: bold; letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    #killBtn.active { background: #ff1744; border-color: #fff; }
+
+    #calibrateBtn {
+      padding: 6px 10px; font-size: 11px; background: #333; color: #eee;
+      border: 1px solid #555; border-radius: 6px; white-space: nowrap;
+    }
+    #calibrateBtn.pulsing { background: #4a90d9; }
+  </style>
+</head>
+<body>
+
+  <div id="rotateOverlay">
+    <div class="icon">&#8635;</div>
+    <div>Please rotate your phone to landscape</div>
+  </div>
+
+  <div id="app">
+    <div id="topBar">
+      <div id="statusDot"></div>
+      <span id="statusText">Not connected</span>
+    </div>
+
+    <div class="main-row">
+      <div class="stick-wrap">
+        <div class="label">Throttle / Yaw</div>
+        <div class="joystick" id="leftBase"><div class="knob" id="leftKnob"></div></div>
+      </div>
+
+      <div class="center-controls">
+        <button id="killBtn">EMERGENCY<br>STOP</button>
+        <button id="calibrateBtn">Calibrate Gyro</button>
+        <div id="telemetry">
+          T: <span id="tVal">0</span><br>
+          Y: <span id="yVal">0</span><br>
+          P: <span id="pVal">0</span><br>
+          R: <span id="rVal">0</span>
+        </div>
+      </div>
+
+      <div class="stick-wrap">
+        <div class="label">Pitch / Roll</div>
+        <div class="joystick" id="rightBase"><div class="knob" id="rightKnob"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---- Joystick: standard RC Mode-2 self-centering ----
+    class Joystick {
+      constructor(baseEl, knobEl, opts = {}) {
+        this.base = baseEl;
+        this.knob = knobEl;
+        this.selfCenterX = opts.selfCenterX !== false; // default true
+        this.selfCenterY = opts.selfCenterY !== false; // default true
+        this.x = 0; this.y = 0; // normalized -1..1
+        this.pointerId = null;
+        this.deadZone = 0.05;
+
+        this.base.addEventListener('pointerdown', (e) => this.onDown(e));
+        window.addEventListener('pointermove', (e) => this.onMove(e));
+        window.addEventListener('pointerup', (e) => this.onUp(e));
+        window.addEventListener('pointercancel', (e) => this.onUp(e));
+      }
+      onDown(e) {
+        this.pointerId = e.pointerId;
+        this.base.setPointerCapture(e.pointerId);
+        this.updateFromEvent(e);
+      }
+      onMove(e) {
+        if (e.pointerId !== this.pointerId) return;
+        this.updateFromEvent(e);
+      }
+      onUp(e) {
+        if (e.pointerId !== this.pointerId) return;
+        this.pointerId = null;
+        if (this.selfCenterX) this.x = 0;
+        if (this.selfCenterY) this.y = 0;
+        this.render();
+      }
+      updateFromEvent(e) {
+        const rect = this.base.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        let dx = e.clientX - cx;
+        let dy = e.clientY - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const maxDist = rect.width / 2;
+        if (dist > maxDist) {
+          dx = (dx / dist) * maxDist;
+          dy = (dy / dist) * maxDist;
+        }
+        this.x = dx / maxDist;
+        this.y = -dy / maxDist;
+        this.render();
+      }
+      render() {
+        const radius = this.base.clientWidth / 2;
+        const px = this.x * radius;
+        const py = -this.y * radius;
+        this.knob.style.transform = `translate(-50%,-50%) translate(${px}px, ${py}px)`;
+      }
+      getValue() {
+        let x = Math.abs(this.x) < this.deadZone ? 0 : this.x;
+        let y = Math.abs(this.y) < this.deadZone ? 0 : this.y;
+        return { x, y };
+      }
+    }
+
+    const leftStick = new Joystick(
+      document.getElementById('leftBase'),
+      document.getElementById('leftKnob'),
+      { selfCenterY: false } // throttle holds position; yaw springs back
+    );
+    const rightStick = new Joystick(
+      document.getElementById('rightBase'),
+      document.getElementById('rightKnob')
+      // pitch/roll both spring back to center (default)
+    );
+
+    // ---- Kill switch (toggle) ----
+    let killed = false;
+    const killBtn = document.getElementById('killBtn');
+    killBtn.addEventListener('pointerdown', () => {
+      killed = !killed;
+      killBtn.classList.toggle('active', killed);
+      killBtn.innerHTML = killed ? 'RESET<br>(KILLED)' : 'EMERGENCY<br>STOP';
+    });
+
+    // ---- Calibrate (momentary pulse, one packet) ----
+    let calibratePulse = false;
+    const calibrateBtn = document.getElementById('calibrateBtn');
+    calibrateBtn.addEventListener('pointerdown', () => {
+      calibratePulse = true;
+      calibrateBtn.classList.add('pulsing');
+      setTimeout(() => {
+        calibratePulse = false;
+        calibrateBtn.classList.remove('pulsing');
+      }, 150);
+    });
+
+    // ---- WebSocket ----
+    const statusDot = document.getElementById('statusDot');
+    const statusText = document.getElementById('statusText');
+    let ws;
+
+    function connect() {
+      ws = new WebSocket('ws://' + location.hostname + '/ws');
+      ws.binaryType = 'arraybuffer';
+      ws.onopen = () => {
+        statusText.textContent = 'Connected';
+        statusDot.classList.add('connected');
+      };
+      ws.onclose = () => {
+        statusText.textContent = 'Disconnected — retrying...';
+        statusDot.classList.remove('connected');
+        setTimeout(connect, 1000);
+      };
+      ws.onerror = () => {
+        statusText.textContent = 'Error';
+        statusDot.classList.remove('connected');
+      };
+    }
+    connect();
+
+    function toByte(v) { // v in -1..1 -> 0..255, center ~127.5
+      return Math.max(0, Math.min(255, Math.round((v + 1) / 2 * 255)));
+    }
+
+    const tVal = document.getElementById('tVal');
+    const yVal = document.getElementById('yVal');
+    const pVal = document.getElementById('pVal');
+    const rVal = document.getElementById('rVal');
+
+    setInterval(() => {
+      const left = leftStick.getValue();
+      const right = rightStick.getValue();
+
+      const throttle = toByte(left.y);
+      const yaw = toByte(left.x);
+      const pitch = toByte(right.y);
+      const roll = toByte(right.x);
+
+      let flags = 0;
+      if (killed) flags |= 0x02;      // FLAG_KILL
+      if (calibratePulse) flags |= 0x04; // FLAG_CALIBRATE
+
+      const bytes = [throttle, yaw, pitch, roll, flags];
+      let checksum = 0;
+      for (const b of bytes) checksum ^= b;
+      const packet = new Uint8Array([...bytes, checksum]);
+
+      tVal.textContent = throttle;
+      yVal.textContent = yaw - 128;
+      pVal.textContent = pitch - 128;
+      rVal.textContent = roll - 128;
+
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(packet);
+      }
+    }, 20); // 50Hz
+  </script>
+</body>
+</html>

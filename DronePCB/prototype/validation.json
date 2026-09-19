@@ -1,0 +1,51 @@
+{
+  "status": "Wiring reference for prototype; no physical assembly or flight validation",
+  "schematic_components": 43,
+  "connected_pins_checked": 104,
+  "connection_mismatches": [],
+  "erc_violations": [],
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "topology_checks": [
+    "Four MOSFET source/gate/drain connections",
+    "Four flyback diode polarities",
+    "Four motor-mounted capacitors across motors",
+    "Four gate resistors and source pulldowns",
+    "Battery divider midpoint",
+    "GPIO uniqueness and camera/strap/memory/USB exclusions"
+  ],
+  "gpio": {
+    "motor1": 14,
+    "motor2": 21,
+    "motor3": 47,
+    "motor4": 39,
+    "imu_sda": 41,
+    "imu_scl": 42,
+    "imu_int": 40,
+    "battery_adc": 1
+  },
+  "constraints": [
+    "No SD card; GPIO39/40 repurposed",
+    "No GPIO JTAG on reused pins",
+    "Exact Freenove FNK0085 pinout",
+    "Use documented 3.3V-compatible MPU6050 module",
+    "AO3400A adapters require thermal/current checks",
+    "Firmware and assembled flight performance untested"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schematic_connected_pins": 240,
+  "pcb_connected_pins": 240,
+  "mismatches": [],
+  "offboard_components": [
+    "C101",
+    "C102",
+    "C103",
+    "C104"
+  ]
+}

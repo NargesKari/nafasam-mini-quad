@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>E:\DronePCB\prototype\Perfboard.kicad_sch</source>
+    <date>2026-09-10T22:01:16</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Perfboard.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/">
+      <title_block>
+        <title>Controller, IMU and battery sensing</title>
+        <company/>
+        <rev>P1 PROTOTYPE</rev>
+        <date/>
+        <source>sheet1.kicad_sch</source>
+        <comment number="1" value="Soldered perfboard / follow named nets and manufacturer header labels"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/">
+      <title_block>
+        <title>Battery and electronics power</title>
+        <company/>
+        <rev>P1 PROTOTYPE</rev>
+        <date/>
+        <source>sheet2.kicad_sch</source>
+        <comment number="1" value="Soldered perfboard / follow named nets and manufacturer header labels"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/">
+      <title_block>
+        <title>Motor channels 1 and 2</title>
+        <company/>
+        <rev>P1 PROTOTYPE</rev>
+        <date/>
+        <source>sheet3.kicad_sch</source>
+        <comment number="1" value="Soldered perfboard / follow named nets and manufacturer header labels"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/">
+      <title_block>
+        <title>Motor channels 3 and 4</title>
+        <company/>
+        <rev>P1 PROTOTYPE</rev>
+        <date/>
+        <source>sheet4.kicad_sch</source>
+        <comment number="1" value="Soldered perfboard / follow named nets and manufacturer header labels"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C13">
+      <value>100nF 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>73792a20-e0fb-5c60-ad15-03ae3bb977da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>100nF 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>5ef9e4d9-9f4d-5d7f-acba-c1e31a0e68df</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>10uF 10V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>38646fc7-a70a-5501-b277-a52ec0069bde</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>4.7k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>caefae70-cc6a-5a35-b174-93996a192157</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>4.7k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>4d4667c2-af53-5673-b99f-c5f2f7de1517</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>100k 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>205c0ada-5f80-56db-97bc-d3f49038ae9b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>100k 1%</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>42ffb6ae-c3ea-50bc-a0de-f34b3bed956a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>Freenove FNK0085 + supplied OV2640</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Perfboard" part="Freenove_S3_CAM_Interface" description=""/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>c9cb0395-a197-5dd8-9004-4758ef68af66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5V"/>
+            <pin num="GND"/>
+            <pin num="3V3"/>
+            <pin num="1"/>
+            <pin num="41"/>
+            <pin num="42"/>
+            <pin num="40"/>
+            <pin num="14"/>
+            <pin num="21"/>
+            <pin num="47"/>
+            <pin num="39"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>Adafruit MPU-6050 breakout</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Perfboard" part="MPU6050_Breakout_Interface" description=""/>
+      <property name="Sheetname" value="Controller, IMU and battery sensing"/>
+      <property name="Sheetfile" value="sheet1.kicad_sch"/>
+      <sheetpath names="/Controller, IMU and battery sensing/" tstamps="/332440d5-4c6d-512e-99a6-84dd5649954c/"/>
+      <tstamps>22acec69-add4-5b5c-b32f-b255119ac98b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="VIN"/>
+            <pin num="GND"/>
+            <pin num="AD0"/>
+            <pin num="SDA"/>
+            <pin num="SCL"/>
+            <pin num="INT"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>470uF 10V LOW ESR</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Battery and electronics power"/>
+      <property name="Sheetfile" value="sheet2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/"/>
+      <tstamps>74b735f3-78c6-5c53-9c47-c8396e6f03eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>47uF 10V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Battery and electronics power"/>
+      <property name="Sheetfile" value="sheet2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/"/>
+      <tstamps>aeeb663c-c18b-5d33-bd3c-45dff83fac5b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100uF 10V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Battery and electronics power"/>
+      <property name="Sheetfile" value="sheet2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/"/>
+      <tstamps>34c2ef9c-3f95-5672-8265-2dd39d3bec3e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>100nF 16V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Battery and electronics power"/>
+      <property name="Sheetfile" value="sheet2.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/"/>
+      <tstamps>ff3f2239-36b3-5969-ad12-36f61b9deb03</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>1S LiPo battery connector</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Battery and electronics power"/>
+      <property name="Sheetfile" value="sheet2.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/"/>
+      <tstamps>57d98633-5f07-5034-b113-6c2692736ca0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>Pololu U3V40F5 / fixed 5V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Perfboard" part="U3V40F5_Interface" description=""/>
+      <property name="Sheetname" value="Battery and electronics power"/>
+      <property name="Sheetfile" value="sheet2.kicad_sch"/>
+      <sheetpath names="/Battery and electronics power/" tstamps="/5305985d-fe4a-5c34-833d-413ff95bb351/"/>
+      <tstamps>6928f276-abaa-5072-a11f-2c6c562aa4da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="VIN"/>
+            <pin num="GND"/>
+            <pin num="VOUT"/>
+            <pin num="EN"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C1">
+      <value>100nF 16V AT MOTOR</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>fa3fbb59-46fe-591e-b9ab-b34813c42f84</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF 16V AT MOTOR</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>a38c4da0-d745-57c4-93fa-11c7554e78f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>10uF 10V LOCAL</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>46b50861-6617-59cd-98ba-588ed7941149</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10uF 10V LOCAL</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>05e72866-4694-5dc7-9fb8-086021bc55aa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>1N5822 3A 40V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>10259e23-e742-525d-9121-22ec60074b20</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>1N5822 3A 40V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>52549fd3-af19-581b-a024-3c5e01eb0ea6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>8520 MOTOR 1</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>710da31b-109e-59c2-a15b-7857e7fcd53b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>8520 MOTOR 2</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>092f4fc9-0d94-52ba-9b83-e9c3108f4ad3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3400A on SOT-23 adapter</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_FET" part="AO3400A" description="30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>39168669-05d4-5d3c-8852-e8d4063b7dc0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>AO3400A on SOT-23 adapter</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_FET" part="AO3400A" description="30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>b87a177d-9d35-5385-8dd2-f69614443c18</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>100R</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>62ba2abe-fe7b-564d-b468-120833f49f26</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>100R</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>780b39ab-6992-5ac5-aafb-2b442b522886</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>b1cf4972-7d80-5a79-9531-28e0805c11f2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 1 and 2"/>
+      <property name="Sheetfile" value="sheet3.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 1 and 2/" tstamps="/66efceb2-1817-5967-a806-b4b89ed1325c/"/>
+      <tstamps>02a0d8e2-2825-55ef-9efc-525ab9c24c8c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF 16V AT MOTOR</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>7b74bac9-f0bb-5703-9f3f-6e4ed8941615</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100nF 16V AT MOTOR</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>ab231bc2-ac7a-5ab8-9e73-31a2e0fbf059</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>10uF 10V LOCAL</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>477eb2b2-3fcb-5517-b60f-61fc0481c07f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>10uF 10V LOCAL</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>18e9b2c6-a2a3-5a72-8628-cc502f53ceb5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>1N5822 3A 40V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>118bae7a-d90a-5162-ad5c-614ea49689e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D4">
+      <value>1N5822 3A 40V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="diode Schottky"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>990474f2-ed47-50a3-ba81-d44fdfb6ad3b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>8520 MOTOR 3</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>ca72eee4-9765-54cf-a00a-9ce0a1fde566</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>8520 MOTOR 4</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>76482f1e-2240-5367-b4c6-faa0ca7c7dd6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>AO3400A on SOT-23 adapter</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_FET" part="AO3400A" description="30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>cdb9f745-f7b4-5fc9-989c-9a4711b15321</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q4">
+      <value>AO3400A on SOT-23 adapter</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Transistor_FET" part="AO3400A" description="30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>84a3a6c3-6971-53e3-829a-ee03c4641f38</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>100R</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>51818f47-94fd-5f48-bc1b-51d14d1152ba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>100R</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>2532f758-4b10-5d79-a044-76964119fcb1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>8c93395d-5c63-5fb4-b1f5-4819262de5bb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Motor channels 3 and 4"/>
+      <property name="Sheetfile" value="sheet4.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Motor channels 3 and 4/" tstamps="/90cb9513-e227-5642-98f6-6765cd31fd2d/"/>
+      <tstamps>476f59dd-40e0-5f30-b0dc-4cb077579a6c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Schottky diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Perfboard" part="Freenove_S3_CAM_Interface">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Freenove_S3_CAM_Interface</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GPIO1_ADC" type="input"/>
+        <pin num="3V3" name="3V3_OUT" type="power_out"/>
+        <pin num="5V" name="5V_IN" type="power_in"/>
+        <pin num="14" name="GPIO14_M1" type="output"/>
+        <pin num="21" name="GPIO21_M2" type="output"/>
+        <pin num="39" name="GPIO39_M4" type="output"/>
+        <pin num="40" name="GPIO40_INT" type="input"/>
+        <pin num="41" name="GPIO41_SDA" type="bidirectional"/>
+        <pin num="42" name="GPIO42_SCL" type="output"/>
+        <pin num="47" name="GPIO47_M3" type="output"/>
+        <pin num="GND" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Perfboard" part="MPU6050_Breakout_Interface">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MPU6050_Breakout_Interface</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="AD0" name="AD0" type="input"/>
+        <pin num="GND" name="GND" type="power_in"/>
+        <pin num="INT" name="INT" type="output"/>
+        <pin num="SCL" name="SCL" type="input"/>
+        <pin num="SDA" name="SDA" type="bidirectional"/>
+        <pin num="VIN" name="VIN_3V3" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Perfboard" part="U3V40F5_Interface">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">U3V40F5_Interface</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="EN" name="EN_LEAVE_OPEN" type="input"/>
+        <pin num="GND" name="GND" type="power_in"/>
+        <pin num="VIN" name="VIN_1S" type="power_in"/>
+        <pin num="VOUT" name="VOUT_5V" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="AO3400A">
+      <description>30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23</description>
+      <docs>http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3400A</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf</field>
+        <field name="Description">30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>${KIPRJMOD}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KIPRJMOD}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Perfboard">
+      <uri>${KIPRJMOD}/Perfboard.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>${KIPRJMOD}/Transistor_FET.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="3V3" class="Default">
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3V3" pinfunction="3V3_OUT_3V3" pintype="power_out"/>
+      <node ref="U2" pin="VIN" pinfunction="VIN_3V3_VIN" pintype="power_in"/>
+    </net>
+    <net code="2" name="5V" class="Default">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5V" pinfunction="5V_IN_5V" pintype="power_in"/>
+      <node ref="U3" pin="VOUT" pinfunction="VOUT_5V_VOUT" pintype="power_out"/>
+    </net>
+    <net code="3" name="GATE1" class="Default">
+      <node ref="Q1" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="GATE2" class="Default">
+      <node ref="Q2" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="5" name="GATE3" class="Default">
+      <node ref="Q3" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="GATE4" class="Default">
+      <node ref="Q4" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="GND" class="Default">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+      <node ref="U2" pin="AD0" pinfunction="AD0_AD0" pintype="input"/>
+      <node ref="U2" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+      <node ref="U3" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+    </net>
+    <net code="8" name="IMU_INT" class="Default">
+      <node ref="U1" pin="40" pinfunction="GPIO40_INT_40" pintype="input"/>
+      <node ref="U2" pin="INT" pinfunction="INT_INT" pintype="output"/>
+    </net>
+    <net code="9" name="IMU_SCL" class="Default">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U1" pin="42" pinfunction="GPIO42_SCL_42" pintype="output"/>
+      <node ref="U2" pin="SCL" pinfunction="SCL_SCL" pintype="input"/>
+    </net>
+    <net code="10" name="IMU_SDA" class="Default">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="41" pinfunction="GPIO41_SDA_41" pintype="bidirectional"/>
+      <node ref="U2" pin="SDA" pinfunction="SDA_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="MOTOR1_NEG" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="12" name="MOTOR2_NEG" class="Default">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="13" name="MOTOR3_NEG" class="Default">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="14" name="MOTOR4_NEG" class="Default">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="15" name="PWM1" class="Default">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="GPIO14_M1_14" pintype="output"/>
+    </net>
+    <net code="16" name="PWM2" class="Default">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="GPIO21_M2_21" pintype="output"/>
+    </net>
+    <net code="17" name="PWM3" class="Default">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="47" pinfunction="GPIO47_M3_47" pintype="output"/>
+    </net>
+    <net code="18" name="PWM4" class="Default">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="GPIO39_M4_39" pintype="output"/>
+    </net>
+    <net code="19" name="VBAT" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U3" pin="VIN" pinfunction="VIN_1S_VIN" pintype="power_in"/>
+    </net>
+    <net code="20" name="VBAT_SENSE" class="Default">
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GPIO1_ADC_1" pintype="input"/>
+    </net>
+    <net code="21" name="unconnected-(U3-EN_LEAVE_OPEN-PadEN)" class="Default">
+      <node ref="U3" pin="EN" pinfunction="EN_LEAVE_OPEN_EN" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

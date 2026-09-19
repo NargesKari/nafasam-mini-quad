@@ -1,0 +1,74 @@
+Reference,Value_or_MPN,Footprint,On_PCB,Notes
+U1,ESP32-S3-MINI-1-N4R2,RF_Module:ESP32-S2-MINI-1,True,4MB flash / 2MB PSRAM; module antenna extends beyond top board edge
+C1,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C2,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+R1,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+C3,1uF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+R2,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+J1,3.3V UART programmer pads,Drone:Programming_6,True,External programmer: 3.3V logic only; pin2 reference only with battery attached
+R3,100k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R4,100k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+C4,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+U2,TPS63021DSJR,Drone:TI_DSJ14_TPS63021,True,Fixed3.3V; power-save mode; 1A electronics design target at VBAT>=3.0V subject to bench testing
+L1,1.5uH XFL4020-152MEC,Drone:XFL4020,True,Coilcraft reference inductor; confirm exact suffix and DCR at sourcing
+C5,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C6,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C7,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C8,22uF,Capacitor_SMD:C_0805_2012Metric,True,X5R 10V; verify effective capacitance under DC bias
+C9,22uF,Capacitor_SMD:C_0805_2012Metric,True,X5R 10V; verify effective capacitance under DC bias
+C10,22uF,Capacitor_SMD:C_0805_2012Metric,True,X5R 10V; verify effective capacitance under DC bias
+J2,1S LiPo 700mAh 20C,Drone:Battery_2,True,Direct solder pads; no charger or reverse-polarity protection; disconnect battery when unused
+C11,220uF 10V,Capacitor_SMD:CP_Elec_6.3x5.8,True,Low ESR aluminum/polymer; ripple-current rating >=1A; final exact part depends on sourcing
+U3,MPU-6050,Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm,True,"I2C address0x68; use genuine bare chip, orientation must be calibrated in firmware"
+R5,10R,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+C12,1uF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C13,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C14,10nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C15,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C16,2.2nF 50V,Capacitor_SMD:C_0402_1005Metric,True,X7R 50V +/-10%; charge pump capacitor
+R6,4.7k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R7,4.7k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+J3,OV2640 flex / FH12-24S-0.5SH(55),Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal,True,"ONLY pin-compatible 24pin0.5mm OV2640 flex; bottom-contact connector, confirm flex contact side/length before purchase"
+U4,TLV70028DDCR,Package_TO_SOT_SMD:SOT-23-5,True,"2.8V analog camera rail,200mA"
+U5,TLV70012DDCR,Package_TO_SOT_SMD:SOT-23-5,True,"1.2V core camera rail,200mA"
+C17,1uF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C18,1uF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C19,1uF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C20,1uF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C21,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C22,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+C23,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+R8,4.7k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R9,4.7k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R10,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+C24,100nF,Capacitor_SMD:C_0402_1005Metric,True,"X7R, 10V; use specified voltage where marked"
+R11,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R12,33R,Resistor_SMD:R_0402_1005Metric,True,Source series damping; tune with scope
+Q1,AO3400A,Package_TO_SOT_SMD:SOT-23,True,SOT23 G1/S2/D3; verify stall current and heating with actual prop
+R13,100R,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R17,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+D1,SS34,Diode_SMD:D_SMA,True,3A40V Schottky flyback; cathode pad1 to VBAT
+J4,8520 motor 1,Drone:Motor_2,True,Direct motor wire solder pads; motor body not on PCB
+C25,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C101,100nF 16V motor-mounted,,False,"Solder directly across motor terminals; included in BOM, off-board"
+Q2,AO3400A,Package_TO_SOT_SMD:SOT-23,True,SOT23 G1/S2/D3; verify stall current and heating with actual prop
+R14,100R,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R18,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+D2,SS34,Diode_SMD:D_SMA,True,3A40V Schottky flyback; cathode pad1 to VBAT
+J5,8520 motor 2,Drone:Motor_2,True,Direct motor wire solder pads; motor body not on PCB
+C26,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C102,100nF 16V motor-mounted,,False,"Solder directly across motor terminals; included in BOM, off-board"
+Q3,AO3400A,Package_TO_SOT_SMD:SOT-23,True,SOT23 G1/S2/D3; verify stall current and heating with actual prop
+R15,100R,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R19,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+D3,SS34,Diode_SMD:D_SMA,True,3A40V Schottky flyback; cathode pad1 to VBAT
+J6,8520 motor 3,Drone:Motor_2,True,Direct motor wire solder pads; motor body not on PCB
+C27,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C103,100nF 16V motor-mounted,,False,"Solder directly across motor terminals; included in BOM, off-board"
+Q4,AO3400A,Package_TO_SOT_SMD:SOT-23,True,SOT23 G1/S2/D3; verify stall current and heating with actual prop
+R16,100R,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+R20,10k,Resistor_SMD:R_0402_1005Metric,True,"1%, 0402"
+D4,SS34,Diode_SMD:D_SMA,True,3A40V Schottky flyback; cathode pad1 to VBAT
+J7,8520 motor 4,Drone:Motor_2,True,Direct motor wire solder pads; motor body not on PCB
+C28,10uF,Capacitor_SMD:C_0603_1608Metric,True,"X7R, 10V; use specified voltage where marked"
+C104,100nF 16V motor-mounted,,False,"Solder directly across motor terminals; included in BOM, off-board"

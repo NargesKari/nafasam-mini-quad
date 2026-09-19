@@ -1,0 +1,579 @@
+[
+  {
+    "ref": "U1",
+    "lib": "Perfboard:Freenove_S3_CAM_Interface",
+    "value": "Freenove FNK0085 + supplied OV2640",
+    "nets": {
+      "5V": "5V",
+      "GND": "GND",
+      "3V3": "3V3",
+      "1": "VBAT_SENSE",
+      "41": "IMU_SDA",
+      "42": "IMU_SCL",
+      "40": "IMU_INT",
+      "14": "PWM1",
+      "21": "PWM2",
+      "47": "PWM3",
+      "39": "PWM4"
+    },
+    "page": 1,
+    "x": 105.41,
+    "y": 78.74,
+    "note": "Interface pin identifiers are header labels, not sequential physical pin numbers. No SD card."
+  },
+  {
+    "ref": "U2",
+    "lib": "Perfboard:MPU6050_Breakout_Interface",
+    "value": "Adafruit MPU-6050 breakout",
+    "nets": {
+      "VIN": "3V3",
+      "GND": "GND",
+      "AD0": "GND",
+      "SDA": "IMU_SDA",
+      "SCL": "IMU_SCL",
+      "INT": "IMU_INT"
+    },
+    "page": 1,
+    "x": 281.94,
+    "y": 78.74,
+    "note": "VIN at 3.3V; leave 3Vo and auxiliary pins unused; address 0x68"
+  },
+  {
+    "ref": "U3",
+    "lib": "Perfboard:U3V40F5_Interface",
+    "value": "Pololu U3V40F5 / fixed 5V",
+    "nets": {
+      "VIN": "VBAT",
+      "GND": "GND",
+      "VOUT": "5V"
+    },
+    "page": 2,
+    "x": 111.76,
+    "y": 63.5,
+    "note": "EN left open; tie both VIN pads to VBAT and both GND pads to ground. No motor current through regulator."
+  },
+  {
+    "ref": "J1",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "1S LiPo battery connector",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "x": 40.64,
+    "y": 63.5,
+    "note": "Battery connector must support measured aggregate current; unplug to disconnect"
+  },
+  {
+    "ref": "R9",
+    "lib": "Device:R",
+    "value": "4.7k",
+    "nets": {
+      "1": "3V3",
+      "2": "IMU_SDA"
+    },
+    "page": 1,
+    "x": 233.68,
+    "y": 132.08,
+    "note": ""
+  },
+  {
+    "ref": "R10",
+    "lib": "Device:R",
+    "value": "4.7k",
+    "nets": {
+      "1": "3V3",
+      "2": "IMU_SCL"
+    },
+    "page": 1,
+    "x": 330.2,
+    "y": 132.08,
+    "note": ""
+  },
+  {
+    "ref": "R11",
+    "lib": "Device:R",
+    "value": "100k 1%",
+    "nets": {
+      "1": "VBAT",
+      "2": "VBAT_SENSE"
+    },
+    "page": 1,
+    "x": 50.8,
+    "y": 162.56,
+    "note": ""
+  },
+  {
+    "ref": "R12",
+    "lib": "Device:R",
+    "value": "100k 1%",
+    "nets": {
+      "1": "VBAT_SENSE",
+      "2": "GND"
+    },
+    "page": 1,
+    "x": 111.76,
+    "y": 162.56,
+    "note": ""
+  },
+  {
+    "ref": "C13",
+    "lib": "Device:C",
+    "value": "100nF 16V",
+    "nets": {
+      "1": "VBAT_SENSE",
+      "2": "GND"
+    },
+    "page": 1,
+    "x": 172.72,
+    "y": 162.56,
+    "note": ""
+  },
+  {
+    "ref": "C14",
+    "lib": "Device:C",
+    "value": "100nF 16V",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 1,
+    "x": 233.68,
+    "y": 190.5,
+    "note": ""
+  },
+  {
+    "ref": "C15",
+    "lib": "Device:C_Polarized",
+    "value": "10uF 10V",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 1,
+    "x": 330.2,
+    "y": 190.5,
+    "note": ""
+  },
+  {
+    "ref": "C9",
+    "lib": "Device:C_Polarized",
+    "value": "470uF 10V LOW ESR",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "x": 172.72,
+    "y": 132.08,
+    "note": ""
+  },
+  {
+    "ref": "C10",
+    "lib": "Device:C_Polarized",
+    "value": "47uF 10V",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "x": 233.68,
+    "y": 132.08,
+    "note": ""
+  },
+  {
+    "ref": "C11",
+    "lib": "Device:C_Polarized",
+    "value": "100uF 10V",
+    "nets": {
+      "1": "5V",
+      "2": "GND"
+    },
+    "page": 2,
+    "x": 294.64,
+    "y": 132.08,
+    "note": ""
+  },
+  {
+    "ref": "C12",
+    "lib": "Device:C",
+    "value": "100nF 16V",
+    "nets": {
+      "1": "5V",
+      "2": "GND"
+    },
+    "page": 2,
+    "x": 355.6,
+    "y": 132.08,
+    "note": ""
+  },
+  {
+    "ref": "Q1",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A on SOT-23 adapter",
+    "nets": {
+      "1": "GATE1",
+      "2": "GND",
+      "3": "MOTOR1_NEG"
+    },
+    "page": 3,
+    "x": 175.26,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "R1",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM1",
+      "2": "GATE1"
+    },
+    "page": 3,
+    "x": 40.64,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "R5",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE1",
+      "2": "GND"
+    },
+    "page": 3,
+    "x": 106.68,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "D1",
+    "lib": "Device:D_Schottky",
+    "value": "1N5822 3A 40V",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    },
+    "page": 3,
+    "x": 246.38,
+    "y": 73.66,
+    "note": "Banded cathode pin1 to battery positive; anode pin2 to drain"
+  },
+  {
+    "ref": "J2",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 MOTOR 1",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    },
+    "page": 3,
+    "x": 332.74,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "C1",
+    "lib": "Device:C",
+    "value": "100nF 16V AT MOTOR",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    },
+    "page": 3,
+    "x": 332.74,
+    "y": 110.49,
+    "note": "Solder directly across motor terminals"
+  },
+  {
+    "ref": "C5",
+    "lib": "Device:C_Polarized",
+    "value": "10uF 10V LOCAL",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 3,
+    "x": 246.38,
+    "y": 110.49,
+    "note": ""
+  },
+  {
+    "ref": "Q2",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A on SOT-23 adapter",
+    "nets": {
+      "1": "GATE2",
+      "2": "GND",
+      "3": "MOTOR2_NEG"
+    },
+    "page": 3,
+    "x": 175.26,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "R2",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM2",
+      "2": "GATE2"
+    },
+    "page": 3,
+    "x": 40.64,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "R6",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE2",
+      "2": "GND"
+    },
+    "page": 3,
+    "x": 106.68,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "D2",
+    "lib": "Device:D_Schottky",
+    "value": "1N5822 3A 40V",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    },
+    "page": 3,
+    "x": 246.38,
+    "y": 175.26,
+    "note": "Banded cathode pin1 to battery positive; anode pin2 to drain"
+  },
+  {
+    "ref": "J3",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 MOTOR 2",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    },
+    "page": 3,
+    "x": 332.74,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "C2",
+    "lib": "Device:C",
+    "value": "100nF 16V AT MOTOR",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    },
+    "page": 3,
+    "x": 332.74,
+    "y": 212.08999999999997,
+    "note": "Solder directly across motor terminals"
+  },
+  {
+    "ref": "C6",
+    "lib": "Device:C_Polarized",
+    "value": "10uF 10V LOCAL",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 3,
+    "x": 246.38,
+    "y": 212.08999999999997,
+    "note": ""
+  },
+  {
+    "ref": "Q3",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A on SOT-23 adapter",
+    "nets": {
+      "1": "GATE3",
+      "2": "GND",
+      "3": "MOTOR3_NEG"
+    },
+    "page": 4,
+    "x": 175.26,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "R3",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM3",
+      "2": "GATE3"
+    },
+    "page": 4,
+    "x": 40.64,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "R7",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE3",
+      "2": "GND"
+    },
+    "page": 4,
+    "x": 106.68,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "D3",
+    "lib": "Device:D_Schottky",
+    "value": "1N5822 3A 40V",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    },
+    "page": 4,
+    "x": 246.38,
+    "y": 73.66,
+    "note": "Banded cathode pin1 to battery positive; anode pin2 to drain"
+  },
+  {
+    "ref": "J4",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 MOTOR 3",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    },
+    "page": 4,
+    "x": 332.74,
+    "y": 73.66,
+    "note": ""
+  },
+  {
+    "ref": "C3",
+    "lib": "Device:C",
+    "value": "100nF 16V AT MOTOR",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    },
+    "page": 4,
+    "x": 332.74,
+    "y": 110.49,
+    "note": "Solder directly across motor terminals"
+  },
+  {
+    "ref": "C7",
+    "lib": "Device:C_Polarized",
+    "value": "10uF 10V LOCAL",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 4,
+    "x": 246.38,
+    "y": 110.49,
+    "note": ""
+  },
+  {
+    "ref": "Q4",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A on SOT-23 adapter",
+    "nets": {
+      "1": "GATE4",
+      "2": "GND",
+      "3": "MOTOR4_NEG"
+    },
+    "page": 4,
+    "x": 175.26,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "R4",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM4",
+      "2": "GATE4"
+    },
+    "page": 4,
+    "x": 40.64,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "R8",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE4",
+      "2": "GND"
+    },
+    "page": 4,
+    "x": 106.68,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "D4",
+    "lib": "Device:D_Schottky",
+    "value": "1N5822 3A 40V",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    },
+    "page": 4,
+    "x": 246.38,
+    "y": 175.26,
+    "note": "Banded cathode pin1 to battery positive; anode pin2 to drain"
+  },
+  {
+    "ref": "J5",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 MOTOR 4",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    },
+    "page": 4,
+    "x": 332.74,
+    "y": 175.26,
+    "note": ""
+  },
+  {
+    "ref": "C4",
+    "lib": "Device:C",
+    "value": "100nF 16V AT MOTOR",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    },
+    "page": 4,
+    "x": 332.74,
+    "y": 212.08999999999997,
+    "note": "Solder directly across motor terminals"
+  },
+  {
+    "ref": "C8",
+    "lib": "Device:C_Polarized",
+    "value": "10uF 10V LOCAL",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 4,
+    "x": 246.38,
+    "y": 212.08999999999997,
+    "note": ""
+  }
+]

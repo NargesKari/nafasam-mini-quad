@@ -1,0 +1,329 @@
+2026-09-07 21:52:27.848 INFO   Freerouting v2.1.0 (build-date: 2025-04-12)
+2026-09-07 21:52:35.950 WARN   No default constructor found for field: currentLocale
+2026-09-07 21:52:35.952 INFO   Settings were loaded from freerouting.json
+2026-09-07 21:52:38.037 INFO   [1D05A9\EA6158] Job '1D05A9\EA6158' started at 2026-09-07T18:22:38.037526100Z
+java.util.concurrent.CompletionException: java.net.ConnectException: Permission denied: getsockopt
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(Unknown Source)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection$ConnectEvent.lambda$handle$2(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Permission denied: getsockopt
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Unknown Source)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection$ConnectEvent.handle(Unknown Source)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(Unknown Source)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(Unknown Source)
+Caused by: java.net.SocketException: Permission denied: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	... 5 more
+2026-09-07 21:52:43.616 INFO   [1D05A9\EA6158] Auto-router pass #1 on board '0c18392b847b47e8ca527a8db5e89773' was completed in 5.22 seconds with the score of 983.09 (5 unrouted), using 13.53 CPU seconds and 1364 MB memory.
+2026-09-07 21:52:44.218 INFO   [1D05A9\EA6158] Auto-router pass #2 on board 'ff67c4db3b41ded28356024764cb1745' was completed in 0.52 seconds with the score of 986.08 (3 unrouted), using 18.95 CPU seconds and 1750 MB memory.
+2026-09-07 21:52:44.611 INFO   [1D05A9\EA6158] Auto-router pass #3 on board '4685d7e2ba0295c92e9888dfae1ee9b4' was completed in 0.31 seconds with the score of 986.08 (3 unrouted), using 18.95 CPU seconds and 1750 MB memory.
+2026-09-07 21:52:51.560 INFO   [1D05A9\EA6158] Auto-router pass #4 on board '4685d7e2ba0295c92e9888dfae1ee9b4' was completed in 6.93 seconds with the score of 987.55 (2 unrouted), using 82.58 CPU seconds and 3965 MB memory.
+2026-09-07 21:52:51.859 INFO   [1D05A9\EA6158] Auto-router pass #5 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 82.58 CPU seconds and 3965 MB memory.
+2026-09-07 21:52:52.091 INFO   [1D05A9\EA6158] Auto-router pass #6 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 82.58 CPU seconds and 3965 MB memory.
+2026-09-07 21:52:52.313 INFO   [1D05A9\EA6158] Auto-router pass #7 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 95.27 CPU seconds and 4381 MB memory.
+2026-09-07 21:52:52.590 INFO   [1D05A9\EA6158] Auto-router pass #8 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.25 seconds with the score of 987.55 (2 unrouted), using 95.27 CPU seconds and 4381 MB memory.
+2026-09-07 21:52:52.834 INFO   [1D05A9\EA6158] Auto-router pass #9 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 95.27 CPU seconds and 4381 MB memory.
+2026-09-07 21:52:53.053 INFO   [1D05A9\EA6158] Auto-router pass #10 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 95.27 CPU seconds and 4381 MB memory.
+2026-09-07 21:52:53.308 INFO   [1D05A9\EA6158] Auto-router pass #11 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 108.86 CPU seconds and 4841 MB memory.
+2026-09-07 21:52:53.538 INFO   [1D05A9\EA6158] Auto-router pass #12 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 108.86 CPU seconds and 4841 MB memory.
+2026-09-07 21:52:53.771 INFO   [1D05A9\EA6158] Auto-router pass #13 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 108.86 CPU seconds and 4841 MB memory.
+2026-09-07 21:52:53.991 INFO   [1D05A9\EA6158] Auto-router pass #14 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 108.86 CPU seconds and 4841 MB memory.
+2026-09-07 21:52:54.201 INFO   [1D05A9\EA6158] Auto-router pass #15 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 123.39 CPU seconds and 5309 MB memory.
+2026-09-07 21:52:54.415 INFO   [1D05A9\EA6158] Auto-router pass #16 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 123.39 CPU seconds and 5309 MB memory.
+2026-09-07 21:52:54.626 INFO   [1D05A9\EA6158] Auto-router pass #17 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 123.39 CPU seconds and 5309 MB memory.
+2026-09-07 21:52:54.828 INFO   [1D05A9\EA6158] Auto-router pass #18 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 123.39 CPU seconds and 5309 MB memory.
+2026-09-07 21:52:55.029 INFO   [1D05A9\EA6158] Auto-router pass #19 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 123.39 CPU seconds and 5309 MB memory.
+2026-09-07 21:52:55.246 INFO   [1D05A9\EA6158] Auto-router pass #20 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 138.91 CPU seconds and 5825 MB memory.
+2026-09-07 21:52:55.467 INFO   [1D05A9\EA6158] Auto-router pass #21 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 138.91 CPU seconds and 5825 MB memory.
+2026-09-07 21:52:55.674 INFO   [1D05A9\EA6158] Auto-router pass #22 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 138.91 CPU seconds and 5825 MB memory.
+2026-09-07 21:52:55.896 INFO   [1D05A9\EA6158] Auto-router pass #23 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 138.91 CPU seconds and 5825 MB memory.
+2026-09-07 21:52:56.099 INFO   [1D05A9\EA6158] Auto-router pass #24 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 138.91 CPU seconds and 5825 MB memory.
+2026-09-07 21:52:56.327 INFO   [1D05A9\EA6158] Auto-router pass #25 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 155.39 CPU seconds and 6321 MB memory.
+2026-09-07 21:52:56.558 INFO   [1D05A9\EA6158] Auto-router pass #26 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 155.39 CPU seconds and 6321 MB memory.
+2026-09-07 21:52:56.749 INFO   [1D05A9\EA6158] Auto-router pass #27 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 155.39 CPU seconds and 6321 MB memory.
+2026-09-07 21:52:56.936 INFO   [1D05A9\EA6158] Auto-router pass #28 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 155.39 CPU seconds and 6321 MB memory.
+2026-09-07 21:52:57.135 INFO   [1D05A9\EA6158] Auto-router pass #29 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 155.39 CPU seconds and 6321 MB memory.
+2026-09-07 21:52:57.329 INFO   [1D05A9\EA6158] Auto-router pass #30 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 172.86 CPU seconds and 6846 MB memory.
+2026-09-07 21:52:57.559 INFO   [1D05A9\EA6158] Auto-router pass #31 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 172.86 CPU seconds and 6846 MB memory.
+2026-09-07 21:52:57.752 INFO   [1D05A9\EA6158] Auto-router pass #32 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 172.86 CPU seconds and 6846 MB memory.
+2026-09-07 21:52:57.946 INFO   [1D05A9\EA6158] Auto-router pass #33 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 172.86 CPU seconds and 6846 MB memory.
+2026-09-07 21:52:58.144 INFO   [1D05A9\EA6158] Auto-router pass #34 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 172.86 CPU seconds and 6846 MB memory.
+2026-09-07 21:52:58.378 INFO   [1D05A9\EA6158] Auto-router pass #35 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 191.31 CPU seconds and 7375 MB memory.
+2026-09-07 21:52:58.616 INFO   [1D05A9\EA6158] Auto-router pass #36 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 191.31 CPU seconds and 7375 MB memory.
+2026-09-07 21:52:58.833 INFO   [1D05A9\EA6158] Auto-router pass #37 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 191.31 CPU seconds and 7375 MB memory.
+2026-09-07 21:52:59.044 INFO   [1D05A9\EA6158] Auto-router pass #38 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 191.31 CPU seconds and 7375 MB memory.
+2026-09-07 21:52:59.253 INFO   [1D05A9\EA6158] Auto-router pass #39 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 210.70 CPU seconds and 7860 MB memory.
+2026-09-07 21:52:59.470 INFO   [1D05A9\EA6158] Auto-router pass #40 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 210.70 CPU seconds and 7860 MB memory.
+2026-09-07 21:52:59.701 INFO   [1D05A9\EA6158] Auto-router pass #41 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 210.70 CPU seconds and 7860 MB memory.
+2026-09-07 21:52:59.908 INFO   [1D05A9\EA6158] Auto-router pass #42 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 210.70 CPU seconds and 7860 MB memory.
+2026-09-07 21:53:00.126 INFO   [1D05A9\EA6158] Auto-router pass #43 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 210.70 CPU seconds and 7860 MB memory.
+2026-09-07 21:53:00.341 INFO   [1D05A9\EA6158] Auto-router pass #44 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 231.05 CPU seconds and 8351 MB memory.
+2026-09-07 21:53:00.550 INFO   [1D05A9\EA6158] Auto-router pass #45 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 231.05 CPU seconds and 8351 MB memory.
+2026-09-07 21:53:00.757 INFO   [1D05A9\EA6158] Auto-router pass #46 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 231.05 CPU seconds and 8351 MB memory.
+2026-09-07 21:53:00.967 INFO   [1D05A9\EA6158] Auto-router pass #47 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 231.05 CPU seconds and 8351 MB memory.
+2026-09-07 21:53:01.188 INFO   [1D05A9\EA6158] Auto-router pass #48 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 252.39 CPU seconds and 8865 MB memory.
+2026-09-07 21:53:01.391 INFO   [1D05A9\EA6158] Auto-router pass #49 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 252.39 CPU seconds and 8865 MB memory.
+2026-09-07 21:53:01.609 INFO   [1D05A9\EA6158] Auto-router pass #50 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 252.39 CPU seconds and 8865 MB memory.
+2026-09-07 21:53:01.810 INFO   [1D05A9\EA6158] Auto-router pass #51 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 252.39 CPU seconds and 8865 MB memory.
+2026-09-07 21:53:02.041 INFO   [1D05A9\EA6158] Auto-router pass #52 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 252.39 CPU seconds and 8865 MB memory.
+2026-09-07 21:53:02.263 INFO   [1D05A9\EA6158] Auto-router pass #53 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 274.70 CPU seconds and 9365 MB memory.
+2026-09-07 21:53:02.488 INFO   [1D05A9\EA6158] Auto-router pass #54 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 274.70 CPU seconds and 9365 MB memory.
+2026-09-07 21:53:02.701 INFO   [1D05A9\EA6158] Auto-router pass #55 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 274.70 CPU seconds and 9365 MB memory.
+2026-09-07 21:53:02.917 INFO   [1D05A9\EA6158] Auto-router pass #56 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 274.70 CPU seconds and 9365 MB memory.
+2026-09-07 21:53:03.145 INFO   [1D05A9\EA6158] Auto-router pass #57 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 274.70 CPU seconds and 9365 MB memory.
+2026-09-07 21:53:03.358 INFO   [1D05A9\EA6158] Auto-router pass #58 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 297.97 CPU seconds and 9852 MB memory.
+2026-09-07 21:53:03.574 INFO   [1D05A9\EA6158] Auto-router pass #59 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 297.97 CPU seconds and 9852 MB memory.
+2026-09-07 21:53:03.792 INFO   [1D05A9\EA6158] Auto-router pass #60 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 297.97 CPU seconds and 9852 MB memory.
+2026-09-07 21:53:04.010 INFO   [1D05A9\EA6158] Auto-router pass #61 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 297.97 CPU seconds and 9852 MB memory.
+2026-09-07 21:53:04.200 INFO   [1D05A9\EA6158] Auto-router pass #62 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 297.97 CPU seconds and 9852 MB memory.
+2026-09-07 21:53:04.403 INFO   [1D05A9\EA6158] Auto-router pass #63 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 322.20 CPU seconds and 10361 MB memory.
+2026-09-07 21:53:04.606 INFO   [1D05A9\EA6158] Auto-router pass #64 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 322.20 CPU seconds and 10361 MB memory.
+2026-09-07 21:53:04.793 INFO   [1D05A9\EA6158] Auto-router pass #65 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 322.20 CPU seconds and 10361 MB memory.
+2026-09-07 21:53:04.990 INFO   [1D05A9\EA6158] Auto-router pass #66 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 322.20 CPU seconds and 10361 MB memory.
+2026-09-07 21:53:05.181 INFO   [1D05A9\EA6158] Auto-router pass #67 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 322.20 CPU seconds and 10361 MB memory.
+2026-09-07 21:53:05.377 INFO   [1D05A9\EA6158] Auto-router pass #68 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 347.44 CPU seconds and 10904 MB memory.
+2026-09-07 21:53:05.581 INFO   [1D05A9\EA6158] Auto-router pass #69 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 347.44 CPU seconds and 10904 MB memory.
+2026-09-07 21:53:05.783 INFO   [1D05A9\EA6158] Auto-router pass #70 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 347.44 CPU seconds and 10904 MB memory.
+2026-09-07 21:53:05.990 INFO   [1D05A9\EA6158] Auto-router pass #71 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 347.44 CPU seconds and 10904 MB memory.
+2026-09-07 21:53:06.214 INFO   [1D05A9\EA6158] Auto-router pass #72 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 373.67 CPU seconds and 11425 MB memory.
+2026-09-07 21:53:06.431 INFO   [1D05A9\EA6158] Auto-router pass #73 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 373.67 CPU seconds and 11425 MB memory.
+2026-09-07 21:53:06.656 INFO   [1D05A9\EA6158] Auto-router pass #74 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 373.67 CPU seconds and 11425 MB memory.
+2026-09-07 21:53:06.854 INFO   [1D05A9\EA6158] Auto-router pass #75 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 373.67 CPU seconds and 11425 MB memory.
+2026-09-07 21:53:07.075 INFO   [1D05A9\EA6158] Auto-router pass #76 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 373.67 CPU seconds and 11425 MB memory.
+2026-09-07 21:53:07.284 INFO   [1D05A9\EA6158] Auto-router pass #77 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 400.84 CPU seconds and 11926 MB memory.
+2026-09-07 21:53:07.491 INFO   [1D05A9\EA6158] Auto-router pass #78 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 400.84 CPU seconds and 11926 MB memory.
+2026-09-07 21:53:07.681 INFO   [1D05A9\EA6158] Auto-router pass #79 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 400.84 CPU seconds and 11926 MB memory.
+2026-09-07 21:53:07.908 INFO   [1D05A9\EA6158] Auto-router pass #80 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 400.84 CPU seconds and 11926 MB memory.
+2026-09-07 21:53:08.111 INFO   [1D05A9\EA6158] Auto-router pass #81 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 400.84 CPU seconds and 11926 MB memory.
+2026-09-07 21:53:08.307 INFO   [1D05A9\EA6158] Auto-router pass #82 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 429.00 CPU seconds and 12451 MB memory.
+2026-09-07 21:53:08.571 INFO   [1D05A9\EA6158] Auto-router pass #83 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.25 seconds with the score of 987.55 (2 unrouted), using 429.00 CPU seconds and 12451 MB memory.
+2026-09-07 21:53:08.751 INFO   [1D05A9\EA6158] Auto-router pass #84 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 429.00 CPU seconds and 12451 MB memory.
+2026-09-07 21:53:08.940 INFO   [1D05A9\EA6158] Auto-router pass #85 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 429.00 CPU seconds and 12451 MB memory.
+2026-09-07 21:53:09.148 INFO   [1D05A9\EA6158] Auto-router pass #86 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 429.00 CPU seconds and 12451 MB memory.
+2026-09-07 21:53:09.345 INFO   [1D05A9\EA6158] Auto-router pass #87 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 458.11 CPU seconds and 12966 MB memory.
+2026-09-07 21:53:09.525 INFO   [1D05A9\EA6158] Auto-router pass #88 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 458.11 CPU seconds and 12966 MB memory.
+2026-09-07 21:53:09.716 INFO   [1D05A9\EA6158] Auto-router pass #89 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 458.11 CPU seconds and 12966 MB memory.
+2026-09-07 21:53:09.896 INFO   [1D05A9\EA6158] Auto-router pass #90 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.16 seconds with the score of 987.55 (2 unrouted), using 458.11 CPU seconds and 12966 MB memory.
+2026-09-07 21:53:10.098 INFO   [1D05A9\EA6158] Auto-router pass #91 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 458.11 CPU seconds and 12966 MB memory.
+2026-09-07 21:53:10.281 INFO   [1D05A9\EA6158] Auto-router pass #92 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 488.12 CPU seconds and 13537 MB memory.
+2026-09-07 21:53:10.507 INFO   [1D05A9\EA6158] Auto-router pass #93 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 488.12 CPU seconds and 13537 MB memory.
+2026-09-07 21:53:10.701 INFO   [1D05A9\EA6158] Auto-router pass #94 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 488.12 CPU seconds and 13537 MB memory.
+2026-09-07 21:53:10.888 INFO   [1D05A9\EA6158] Auto-router pass #95 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 488.12 CPU seconds and 13537 MB memory.
+2026-09-07 21:53:11.073 INFO   [1D05A9\EA6158] Auto-router pass #96 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 488.12 CPU seconds and 13537 MB memory.
+2026-09-07 21:53:11.307 INFO   [1D05A9\EA6158] Auto-router pass #97 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 519.09 CPU seconds and 14067 MB memory.
+2026-09-07 21:53:11.514 INFO   [1D05A9\EA6158] Auto-router pass #98 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 519.09 CPU seconds and 14067 MB memory.
+2026-09-07 21:53:11.747 INFO   [1D05A9\EA6158] Auto-router pass #99 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 519.09 CPU seconds and 14067 MB memory.
+2026-09-07 21:53:11.963 INFO   [1D05A9\EA6158] Auto-router pass #100 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 519.09 CPU seconds and 14067 MB memory.
+2026-09-07 21:53:12.164 INFO   [1D05A9\EA6158] Auto-router pass #101 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 519.09 CPU seconds and 14067 MB memory.
+2026-09-07 21:53:12.375 INFO   [1D05A9\EA6158] Auto-router pass #102 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 551.03 CPU seconds and 14562 MB memory.
+2026-09-07 21:53:12.565 INFO   [1D05A9\EA6158] Auto-router pass #103 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 551.03 CPU seconds and 14562 MB memory.
+2026-09-07 21:53:12.773 INFO   [1D05A9\EA6158] Auto-router pass #104 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 551.03 CPU seconds and 14562 MB memory.
+2026-09-07 21:53:12.981 INFO   [1D05A9\EA6158] Auto-router pass #105 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 551.03 CPU seconds and 14562 MB memory.
+2026-09-07 21:53:13.206 INFO   [1D05A9\EA6158] Auto-router pass #106 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 551.03 CPU seconds and 14562 MB memory.
+2026-09-07 21:53:13.423 INFO   [1D05A9\EA6158] Auto-router pass #107 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 583.97 CPU seconds and 15063 MB memory.
+2026-09-07 21:53:13.622 INFO   [1D05A9\EA6158] Auto-router pass #108 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 583.97 CPU seconds and 15063 MB memory.
+2026-09-07 21:53:13.813 INFO   [1D05A9\EA6158] Auto-router pass #109 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 583.97 CPU seconds and 15063 MB memory.
+2026-09-07 21:53:14.016 INFO   [1D05A9\EA6158] Auto-router pass #110 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 583.97 CPU seconds and 15063 MB memory.
+2026-09-07 21:53:14.231 INFO   [1D05A9\EA6158] Auto-router pass #111 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 583.97 CPU seconds and 15063 MB memory.
+2026-09-07 21:53:14.489 INFO   [1D05A9\EA6158] Auto-router pass #112 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.24 seconds with the score of 987.55 (2 unrouted), using 617.86 CPU seconds and 15590 MB memory.
+2026-09-07 21:53:14.739 INFO   [1D05A9\EA6158] Auto-router pass #113 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 617.86 CPU seconds and 15590 MB memory.
+2026-09-07 21:53:14.996 INFO   [1D05A9\EA6158] Auto-router pass #114 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 617.86 CPU seconds and 15590 MB memory.
+2026-09-07 21:53:15.301 INFO   [1D05A9\EA6158] Auto-router pass #115 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.29 seconds with the score of 987.55 (2 unrouted), using 652.70 CPU seconds and 15996 MB memory.
+2026-09-07 21:53:15.547 INFO   [1D05A9\EA6158] Auto-router pass #116 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 652.70 CPU seconds and 15996 MB memory.
+2026-09-07 21:53:15.767 INFO   [1D05A9\EA6158] Auto-router pass #117 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 652.70 CPU seconds and 15996 MB memory.
+2026-09-07 21:53:16.022 INFO   [1D05A9\EA6158] Auto-router pass #118 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 652.70 CPU seconds and 15996 MB memory.
+2026-09-07 21:53:16.272 INFO   [1D05A9\EA6158] Auto-router pass #119 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 688.50 CPU seconds and 16436 MB memory.
+2026-09-07 21:53:16.488 INFO   [1D05A9\EA6158] Auto-router pass #120 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 688.50 CPU seconds and 16436 MB memory.
+2026-09-07 21:53:16.698 INFO   [1D05A9\EA6158] Auto-router pass #121 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 688.50 CPU seconds and 16436 MB memory.
+2026-09-07 21:53:16.936 INFO   [1D05A9\EA6158] Auto-router pass #122 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 688.50 CPU seconds and 16436 MB memory.
+2026-09-07 21:53:17.163 INFO   [1D05A9\EA6158] Auto-router pass #123 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 688.50 CPU seconds and 16436 MB memory.
+2026-09-07 21:53:17.395 INFO   [1D05A9\EA6158] Auto-router pass #124 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 725.22 CPU seconds and 16912 MB memory.
+2026-09-07 21:53:17.618 INFO   [1D05A9\EA6158] Auto-router pass #125 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 725.22 CPU seconds and 16912 MB memory.
+2026-09-07 21:53:17.845 INFO   [1D05A9\EA6158] Auto-router pass #126 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 725.22 CPU seconds and 16912 MB memory.
+2026-09-07 21:53:18.088 INFO   [1D05A9\EA6158] Auto-router pass #127 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 725.22 CPU seconds and 16912 MB memory.
+2026-09-07 21:53:18.290 INFO   [1D05A9\EA6158] Auto-router pass #128 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 762.91 CPU seconds and 17396 MB memory.
+2026-09-07 21:53:18.504 INFO   [1D05A9\EA6158] Auto-router pass #129 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 762.91 CPU seconds and 17396 MB memory.
+2026-09-07 21:53:18.746 INFO   [1D05A9\EA6158] Auto-router pass #130 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 762.91 CPU seconds and 17396 MB memory.
+2026-09-07 21:53:18.988 INFO   [1D05A9\EA6158] Auto-router pass #131 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 762.91 CPU seconds and 17396 MB memory.
+2026-09-07 21:53:19.263 INFO   [1D05A9\EA6158] Auto-router pass #132 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.25 seconds with the score of 987.55 (2 unrouted), using 762.91 CPU seconds and 17396 MB memory.
+2026-09-07 21:53:19.515 INFO   [1D05A9\EA6158] Auto-router pass #133 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.23 seconds with the score of 987.55 (2 unrouted), using 801.53 CPU seconds and 17833 MB memory.
+2026-09-07 21:53:19.721 INFO   [1D05A9\EA6158] Auto-router pass #134 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 801.53 CPU seconds and 17833 MB memory.
+2026-09-07 21:53:19.922 INFO   [1D05A9\EA6158] Auto-router pass #135 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 801.53 CPU seconds and 17833 MB memory.
+2026-09-07 21:53:20.117 INFO   [1D05A9\EA6158] Auto-router pass #136 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 801.53 CPU seconds and 17833 MB memory.
+2026-09-07 21:53:20.304 INFO   [1D05A9\EA6158] Auto-router pass #137 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 841.12 CPU seconds and 18355 MB memory.
+2026-09-07 21:53:20.496 INFO   [1D05A9\EA6158] Auto-router pass #138 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 841.12 CPU seconds and 18355 MB memory.
+2026-09-07 21:53:20.688 INFO   [1D05A9\EA6158] Auto-router pass #139 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 841.12 CPU seconds and 18355 MB memory.
+2026-09-07 21:53:20.899 INFO   [1D05A9\EA6158] Auto-router pass #140 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 841.12 CPU seconds and 18355 MB memory.
+2026-09-07 21:53:21.106 INFO   [1D05A9\EA6158] Auto-router pass #141 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 841.12 CPU seconds and 18355 MB memory.
+2026-09-07 21:53:21.306 INFO   [1D05A9\EA6158] Auto-router pass #142 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 841.12 CPU seconds and 18355 MB memory.
+2026-09-07 21:53:21.498 INFO   [1D05A9\EA6158] Auto-router pass #143 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 881.70 CPU seconds and 18892 MB memory.
+2026-09-07 21:53:21.696 INFO   [1D05A9\EA6158] Auto-router pass #144 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 881.70 CPU seconds and 18892 MB memory.
+2026-09-07 21:53:21.871 INFO   [1D05A9\EA6158] Auto-router pass #145 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.16 seconds with the score of 987.55 (2 unrouted), using 881.70 CPU seconds and 18892 MB memory.
+2026-09-07 21:53:22.070 INFO   [1D05A9\EA6158] Auto-router pass #146 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 881.70 CPU seconds and 18892 MB memory.
+2026-09-07 21:53:22.258 INFO   [1D05A9\EA6158] Auto-router pass #147 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 881.70 CPU seconds and 18892 MB memory.
+2026-09-07 21:53:22.460 INFO   [1D05A9\EA6158] Auto-router pass #148 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 923.28 CPU seconds and 19452 MB memory.
+2026-09-07 21:53:22.654 INFO   [1D05A9\EA6158] Auto-router pass #149 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 923.28 CPU seconds and 19452 MB memory.
+2026-09-07 21:53:22.862 INFO   [1D05A9\EA6158] Auto-router pass #150 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 923.28 CPU seconds and 19452 MB memory.
+2026-09-07 21:53:23.065 INFO   [1D05A9\EA6158] Auto-router pass #151 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 923.28 CPU seconds and 19452 MB memory.
+2026-09-07 21:53:23.278 INFO   [1D05A9\EA6158] Auto-router pass #152 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 923.28 CPU seconds and 19452 MB memory.
+2026-09-07 21:53:23.500 INFO   [1D05A9\EA6158] Auto-router pass #153 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 965.86 CPU seconds and 19979 MB memory.
+2026-09-07 21:53:23.688 INFO   [1D05A9\EA6158] Auto-router pass #154 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 965.86 CPU seconds and 19979 MB memory.
+2026-09-07 21:53:23.874 INFO   [1D05A9\EA6158] Auto-router pass #155 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 965.86 CPU seconds and 19979 MB memory.
+2026-09-07 21:53:24.056 INFO   [1D05A9\EA6158] Auto-router pass #156 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 965.86 CPU seconds and 19979 MB memory.
+2026-09-07 21:53:24.255 INFO   [1D05A9\EA6158] Auto-router pass #157 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 965.86 CPU seconds and 19979 MB memory.
+2026-09-07 21:53:24.454 INFO   [1D05A9\EA6158] Auto-router pass #158 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1009.41 CPU seconds and 20532 MB memory.
+2026-09-07 21:53:24.644 INFO   [1D05A9\EA6158] Auto-router pass #159 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1009.41 CPU seconds and 20532 MB memory.
+2026-09-07 21:53:24.833 INFO   [1D05A9\EA6158] Auto-router pass #160 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1009.41 CPU seconds and 20532 MB memory.
+2026-09-07 21:53:25.030 INFO   [1D05A9\EA6158] Auto-router pass #161 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1009.41 CPU seconds and 20532 MB memory.
+2026-09-07 21:53:25.221 INFO   [1D05A9\EA6158] Auto-router pass #162 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1009.41 CPU seconds and 20532 MB memory.
+2026-09-07 21:53:25.406 INFO   [1D05A9\EA6158] Auto-router pass #163 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1053.92 CPU seconds and 21088 MB memory.
+2026-09-07 21:53:25.603 INFO   [1D05A9\EA6158] Auto-router pass #164 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1053.92 CPU seconds and 21088 MB memory.
+2026-09-07 21:53:25.796 INFO   [1D05A9\EA6158] Auto-router pass #165 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1053.92 CPU seconds and 21088 MB memory.
+2026-09-07 21:53:25.986 INFO   [1D05A9\EA6158] Auto-router pass #166 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1053.92 CPU seconds and 21088 MB memory.
+2026-09-07 21:53:26.196 INFO   [1D05A9\EA6158] Auto-router pass #167 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1053.92 CPU seconds and 21088 MB memory.
+2026-09-07 21:53:26.392 INFO   [1D05A9\EA6158] Auto-router pass #168 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1099.45 CPU seconds and 21640 MB memory.
+2026-09-07 21:53:26.584 INFO   [1D05A9\EA6158] Auto-router pass #169 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1099.45 CPU seconds and 21640 MB memory.
+2026-09-07 21:53:26.786 INFO   [1D05A9\EA6158] Auto-router pass #170 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1099.45 CPU seconds and 21640 MB memory.
+2026-09-07 21:53:26.970 INFO   [1D05A9\EA6158] Auto-router pass #171 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1099.45 CPU seconds and 21640 MB memory.
+2026-09-07 21:53:27.186 INFO   [1D05A9\EA6158] Auto-router pass #172 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 1099.45 CPU seconds and 21640 MB memory.
+2026-09-07 21:53:27.481 INFO   [1D05A9\EA6158] Auto-router pass #173 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.28 seconds with the score of 987.55 (2 unrouted), using 1145.95 CPU seconds and 22156 MB memory.
+2026-09-07 21:53:27.680 INFO   [1D05A9\EA6158] Auto-router pass #174 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1145.95 CPU seconds and 22156 MB memory.
+2026-09-07 21:53:27.913 INFO   [1D05A9\EA6158] Auto-router pass #175 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.22 seconds with the score of 987.55 (2 unrouted), using 1145.95 CPU seconds and 22156 MB memory.
+2026-09-07 21:53:28.113 INFO   [1D05A9\EA6158] Auto-router pass #176 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1145.95 CPU seconds and 22156 MB memory.
+2026-09-07 21:53:28.294 INFO   [1D05A9\EA6158] Auto-router pass #177 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.16 seconds with the score of 987.55 (2 unrouted), using 1145.95 CPU seconds and 22156 MB memory.
+2026-09-07 21:53:28.487 INFO   [1D05A9\EA6158] Auto-router pass #178 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1193.42 CPU seconds and 22684 MB memory.
+2026-09-07 21:53:28.681 INFO   [1D05A9\EA6158] Auto-router pass #179 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1193.42 CPU seconds and 22684 MB memory.
+2026-09-07 21:53:28.887 INFO   [1D05A9\EA6158] Auto-router pass #180 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1193.42 CPU seconds and 22684 MB memory.
+2026-09-07 21:53:29.086 INFO   [1D05A9\EA6158] Auto-router pass #181 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1193.42 CPU seconds and 22684 MB memory.
+2026-09-07 21:53:29.277 INFO   [1D05A9\EA6158] Auto-router pass #182 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1193.42 CPU seconds and 22684 MB memory.
+2026-09-07 21:53:29.476 INFO   [1D05A9\EA6158] Auto-router pass #183 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1241.88 CPU seconds and 23224 MB memory.
+2026-09-07 21:53:29.670 INFO   [1D05A9\EA6158] Auto-router pass #184 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1241.88 CPU seconds and 23224 MB memory.
+2026-09-07 21:53:29.864 INFO   [1D05A9\EA6158] Auto-router pass #185 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1241.88 CPU seconds and 23224 MB memory.
+2026-09-07 21:53:30.070 INFO   [1D05A9\EA6158] Auto-router pass #186 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1241.88 CPU seconds and 23224 MB memory.
+2026-09-07 21:53:30.268 INFO   [1D05A9\EA6158] Auto-router pass #187 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1241.88 CPU seconds and 23224 MB memory.
+2026-09-07 21:53:30.479 INFO   [1D05A9\EA6158] Auto-router pass #188 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 1291.34 CPU seconds and 23762 MB memory.
+2026-09-07 21:53:30.686 INFO   [1D05A9\EA6158] Auto-router pass #189 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1291.34 CPU seconds and 23762 MB memory.
+2026-09-07 21:53:30.906 INFO   [1D05A9\EA6158] Auto-router pass #190 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 1291.34 CPU seconds and 23762 MB memory.
+2026-09-07 21:53:31.104 INFO   [1D05A9\EA6158] Auto-router pass #191 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1291.34 CPU seconds and 23762 MB memory.
+2026-09-07 21:53:31.314 INFO   [1D05A9\EA6158] Auto-router pass #192 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1291.34 CPU seconds and 23762 MB memory.
+2026-09-07 21:53:31.514 INFO   [1D05A9\EA6158] Auto-router pass #193 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1341.81 CPU seconds and 24281 MB memory.
+2026-09-07 21:53:31.721 INFO   [1D05A9\EA6158] Auto-router pass #194 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1341.81 CPU seconds and 24281 MB memory.
+2026-09-07 21:53:31.911 INFO   [1D05A9\EA6158] Auto-router pass #195 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1341.81 CPU seconds and 24281 MB memory.
+2026-09-07 21:53:32.102 INFO   [1D05A9\EA6158] Auto-router pass #196 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1341.81 CPU seconds and 24281 MB memory.
+2026-09-07 21:53:32.300 INFO   [1D05A9\EA6158] Auto-router pass #197 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1341.81 CPU seconds and 24281 MB memory.
+2026-09-07 21:53:32.489 INFO   [1D05A9\EA6158] Auto-router pass #198 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1393.27 CPU seconds and 24823 MB memory.
+2026-09-07 21:53:32.679 INFO   [1D05A9\EA6158] Auto-router pass #199 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1393.27 CPU seconds and 24823 MB memory.
+2026-09-07 21:53:32.891 INFO   [1D05A9\EA6158] Auto-router pass #200 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 1393.27 CPU seconds and 24823 MB memory.
+2026-09-07 21:53:33.087 INFO   [1D05A9\EA6158] Auto-router pass #201 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1393.27 CPU seconds and 24823 MB memory.
+2026-09-07 21:53:33.288 INFO   [1D05A9\EA6158] Auto-router pass #202 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1393.27 CPU seconds and 24823 MB memory.
+2026-09-07 21:53:33.487 INFO   [1D05A9\EA6158] Auto-router pass #203 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1445.69 CPU seconds and 25367 MB memory.
+2026-09-07 21:53:33.696 INFO   [1D05A9\EA6158] Auto-router pass #204 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1445.69 CPU seconds and 25367 MB memory.
+2026-09-07 21:53:33.895 INFO   [1D05A9\EA6158] Auto-router pass #205 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1445.69 CPU seconds and 25367 MB memory.
+2026-09-07 21:53:34.075 INFO   [1D05A9\EA6158] Auto-router pass #206 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.16 seconds with the score of 987.55 (2 unrouted), using 1445.69 CPU seconds and 25367 MB memory.
+2026-09-07 21:53:34.260 INFO   [1D05A9\EA6158] Auto-router pass #207 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1445.69 CPU seconds and 25367 MB memory.
+2026-09-07 21:53:34.453 INFO   [1D05A9\EA6158] Auto-router pass #208 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1499.09 CPU seconds and 25920 MB memory.
+2026-09-07 21:53:34.637 INFO   [1D05A9\EA6158] Auto-router pass #209 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1499.09 CPU seconds and 25920 MB memory.
+2026-09-07 21:53:34.816 INFO   [1D05A9\EA6158] Auto-router pass #210 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1499.09 CPU seconds and 25920 MB memory.
+2026-09-07 21:53:35.010 INFO   [1D05A9\EA6158] Auto-router pass #211 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1499.09 CPU seconds and 25920 MB memory.
+2026-09-07 21:53:35.211 INFO   [1D05A9\EA6158] Auto-router pass #212 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1499.09 CPU seconds and 25920 MB memory.
+2026-09-07 21:53:35.404 INFO   [1D05A9\EA6158] Auto-router pass #213 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1499.09 CPU seconds and 25920 MB memory.
+2026-09-07 21:53:35.626 INFO   [1D05A9\EA6158] Auto-router pass #214 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 1553.45 CPU seconds and 26476 MB memory.
+2026-09-07 21:53:35.817 INFO   [1D05A9\EA6158] Auto-router pass #215 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1553.45 CPU seconds and 26476 MB memory.
+2026-09-07 21:53:36.021 INFO   [1D05A9\EA6158] Auto-router pass #216 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1553.45 CPU seconds and 26476 MB memory.
+2026-09-07 21:53:36.218 INFO   [1D05A9\EA6158] Auto-router pass #217 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1553.45 CPU seconds and 26476 MB memory.
+2026-09-07 21:53:36.421 INFO   [1D05A9\EA6158] Auto-router pass #218 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.19 seconds with the score of 987.55 (2 unrouted), using 1553.45 CPU seconds and 26476 MB memory.
+2026-09-07 21:53:36.619 INFO   [1D05A9\EA6158] Auto-router pass #219 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.18 seconds with the score of 987.55 (2 unrouted), using 1608.77 CPU seconds and 27015 MB memory.
+2026-09-07 21:53:36.804 INFO   [1D05A9\EA6158] Auto-router pass #220 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1608.77 CPU seconds and 27015 MB memory.
+2026-09-07 21:53:36.995 INFO   [1D05A9\EA6158] Auto-router pass #221 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1608.77 CPU seconds and 27015 MB memory.
+2026-09-07 21:53:37.168 INFO   [1D05A9\EA6158] Auto-router pass #222 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.16 seconds with the score of 987.55 (2 unrouted), using 1608.77 CPU seconds and 27015 MB memory.
+2026-09-07 21:53:37.346 INFO   [1D05A9\EA6158] Auto-router pass #223 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1608.77 CPU seconds and 27015 MB memory.
+2026-09-07 21:53:37.531 INFO   [1D05A9\EA6158] Auto-router pass #224 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1665.06 CPU seconds and 27593 MB memory.
+2026-09-07 21:53:37.718 INFO   [1D05A9\EA6158] Auto-router pass #225 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1665.06 CPU seconds and 27593 MB memory.
+2026-09-07 21:53:37.928 INFO   [1D05A9\EA6158] Auto-router pass #226 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.20 seconds with the score of 987.55 (2 unrouted), using 1665.06 CPU seconds and 27593 MB memory.
+2026-09-07 21:53:38.111 INFO   [1D05A9\EA6158] Auto-router pass #227 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1665.06 CPU seconds and 27593 MB memory.
+2026-09-07 21:53:38.303 INFO   [1D05A9\EA6158] Auto-router pass #228 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.17 seconds with the score of 987.55 (2 unrouted), using 1665.06 CPU seconds and 27593 MB memory.
+2026-09-07 21:53:38.531 INFO   [1D05A9\EA6158] Restoring an earlier board that has the score of 987.55 (2 unrouted).
+2026-09-07 21:53:38.533 INFO   [1D05A9\EA6158] Auto-router pass #229 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.21 seconds with the score of 987.55 (2 unrouted), using 1722.36 CPU seconds and 28158 MB memory.
+2026-09-07 21:53:38.637 INFO   [1D05A9\EA6158] Restoring an earlier board that has the score of 987.55 (2 unrouted).
+2026-09-07 21:53:38.637 INFO   [1D05A9\EA6158] Auto-router pass #230 on board '376627ef6543b3d02b7c900e85ae5ac6' was completed in 0.08 seconds with the score of 987.55 (2 unrouted), using 1722.36 CPU seconds and 28158 MB memory.
+{
+  "host": "KiCad's Pcbnew,10.0.6",
+  "unit": "mm",
+  "board": {
+    "bounding_box": {
+      "x": 1501.0,
+      "y": -999.0,
+      "width": 999.0,
+      "height": -1501.0
+    },
+    "size": {
+      "x": 0.0,
+      "y": 0.0,
+      "width": 502.0,
+      "height": 502.0
+    }
+  },
+  "layers": {
+    "total_count": 4,
+    "signal_count": 2
+  },
+  "items": {
+    "total_count": 1185,
+    "trace_count": 277,
+    "via_count": 196,
+    "conduction_area_count": 2,
+    "drill_item_count": 282,
+    "pin_count": 0,
+    "component_count": 406,
+    "other_count": 22
+  },
+  "components": {
+    "total_count": 73
+  },
+  "pads": {
+    "total_count": 282
+  },
+  "nets": {
+    "total_count": 47,
+    "class_count": 11
+  },
+  "connections": {
+    "maximum_count": 676,
+    "incomplete_count": 2
+  },
+  "traces": {
+    "total_count": 277,
+    "total_segment_count": 638,
+    "total_length": 12247.313,
+    "total_weighted_length": 922767.0,
+    "average_length": 44.214127,
+    "total_vertical_length": 3812.814,
+    "total_horizontal_length": 3530.121,
+    "total_angled_length": 5132.6245
+  },
+  "bends": {
+    "total_count": 361,
+    "90_degree_count": 12,
+    "45_degree_count": 347,
+    "other_angle_count": 2
+  },
+  "vias": {
+    "total_count": 196,
+    "through_hole_count": 196,
+    "blind_count": 0,
+    "buried_count": 0
+  },
+  "clearance_violations": {
+    "total_count": 0
+  }
+}

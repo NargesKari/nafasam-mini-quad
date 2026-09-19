@@ -1,0 +1,26 @@
+[
+  {
+    "net": "CAM_RESET",
+    "start_via": [
+      120.65,
+      139.25
+    ],
+    "end_via": [
+      135.486,
+      133.072
+    ],
+    "inner2_segments": 39
+  },
+  {
+    "net": "CAM_PCLK",
+    "start_via": [
+      127.2,
+      138.8
+    ],
+    "end_via": [
+      122.5,
+      120.4
+    ],
+    "inner2_segments": 35
+  }
+]

@@ -1,0 +1,1783 @@
+[
+  {
+    "ref": "U1",
+    "lib": "RF_Module:ESP32-S3-MINI-1",
+    "value": "ESP32-S3-MINI-1-N4R2",
+    "nets": {
+      "1": "GND",
+      "2": "GND",
+      "42": "GND",
+      "43": "GND",
+      "46": "GND",
+      "47": "GND",
+      "48": "GND",
+      "49": "GND",
+      "50": "GND",
+      "51": "GND",
+      "52": "GND",
+      "53": "GND",
+      "54": "GND",
+      "55": "GND",
+      "56": "GND",
+      "57": "GND",
+      "58": "GND",
+      "59": "GND",
+      "60": "GND",
+      "61": "GND",
+      "62": "GND",
+      "63": "GND",
+      "64": "GND",
+      "65": "GND",
+      "3": "3V3",
+      "4": "BOOT",
+      "5": "VBAT_SENSE",
+      "8": "CAM_PWDN",
+      "9": "CAM_SDA",
+      "10": "CAM_SCL",
+      "11": "CAM_XCLK_SRC",
+      "20": "CAM_PCLK",
+      "21": "CAM_HREF",
+      "22": "CAM_VSYNC",
+      "25": "IMU_INT",
+      "28": "IMU_SDA",
+      "29": "IMU_SCL",
+      "35": "PWM1",
+      "36": "PWM2",
+      "37": "PWM3",
+      "38": "PWM4",
+      "39": "UART_TX",
+      "40": "UART_RX",
+      "45": "ESP_EN",
+      "12": "CAM_D0",
+      "13": "CAM_D1",
+      "14": "CAM_D2",
+      "15": "CAM_D3",
+      "16": "CAM_D4",
+      "17": "CAM_D5",
+      "18": "CAM_D6",
+      "19": "CAM_D7"
+    },
+    "page": 1,
+    "sch": [
+      100,
+      90
+    ],
+    "pcb": [
+      125,
+      107,
+      0
+    ],
+    "fp": "RF_Module:ESP32-S2-MINI-1",
+    "note": "4MB flash / 2MB PSRAM; module antenna extends beyond top board edge",
+    "onboard": true,
+    "uuid": "a04a23ac-7c79-5349-9fdd-18f4a872a432"
+  },
+  {
+    "ref": "C1",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 1,
+    "sch": [
+      195,
+      45
+    ],
+    "pcb": [
+      115,
+      105,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "82207f5b-0c2f-5a09-a31c-5f30b4719eb7"
+  },
+  {
+    "ref": "C2",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 1,
+    "sch": [
+      245,
+      45
+    ],
+    "pcb": [
+      115,
+      107,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "631b92f7-e1a3-5e59-bdd0-fcf6660e1923"
+  },
+  {
+    "ref": "R1",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "3V3",
+      "2": "ESP_EN"
+    },
+    "page": 1,
+    "sch": [
+      195,
+      95
+    ],
+    "pcb": [
+      136,
+      102,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "47dfbda7-1831-5bbc-89c0-d08e161d119a"
+  },
+  {
+    "ref": "C3",
+    "lib": "Device:C",
+    "value": "1uF",
+    "nets": {
+      "1": "ESP_EN",
+      "2": "GND"
+    },
+    "page": 1,
+    "sch": [
+      245,
+      95
+    ],
+    "pcb": [
+      136,
+      104,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "e3c12219-d597-5a9c-819b-1c5cca01e3e9"
+  },
+  {
+    "ref": "R2",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "3V3",
+      "2": "BOOT"
+    },
+    "page": 1,
+    "sch": [
+      195,
+      145
+    ],
+    "pcb": [
+      115,
+      109,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "01826eb5-aa33-5767-9cec-8b13c952a395"
+  },
+  {
+    "ref": "J1",
+    "lib": "Connector_Generic:Conn_01x06",
+    "value": "3.3V UART programmer pads",
+    "nets": {
+      "1": "GND",
+      "2": "3V3",
+      "3": "UART_TX",
+      "4": "UART_RX",
+      "5": "BOOT",
+      "6": "ESP_EN"
+    },
+    "page": 1,
+    "sch": [
+      315,
+      90
+    ],
+    "pcb": [
+      141,
+      108,
+      0
+    ],
+    "fp": "Drone:Programming_6",
+    "note": "External programmer: 3.3V logic only; pin2 reference only with battery attached",
+    "onboard": true,
+    "uuid": "a52e2197-8144-5e9f-aeb3-8450d6568463"
+  },
+  {
+    "ref": "R3",
+    "lib": "Device:R",
+    "value": "100k",
+    "nets": {
+      "1": "VBAT",
+      "2": "VBAT_SENSE"
+    },
+    "page": 1,
+    "sch": [
+      195,
+      200
+    ],
+    "pcb": [
+      112,
+      119,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "b3ae31e6-23c4-5e05-871c-1342956256b3"
+  },
+  {
+    "ref": "R4",
+    "lib": "Device:R",
+    "value": "100k",
+    "nets": {
+      "1": "VBAT_SENSE",
+      "2": "GND"
+    },
+    "page": 1,
+    "sch": [
+      245,
+      200
+    ],
+    "pcb": [
+      114,
+      119,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "0bea7a3f-a332-50d7-9383-074333d9e567"
+  },
+  {
+    "ref": "C4",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "VBAT_SENSE",
+      "2": "GND"
+    },
+    "page": 1,
+    "sch": [
+      295,
+      200
+    ],
+    "pcb": [
+      116,
+      119,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "5b7bcca5-9bf9-58e9-b85c-02da8fb1a3e3"
+  },
+  {
+    "ref": "U2",
+    "lib": "Drone:TPS63021DSJ",
+    "value": "TPS63021DSJR",
+    "nets": {
+      "1": "VBAT",
+      "10": "VBAT",
+      "11": "VBAT",
+      "12": "VBAT",
+      "13": "GND",
+      "8": "SW1",
+      "9": "SW1",
+      "4": "3V3",
+      "5": "3V3",
+      "3": "3V3",
+      "6": "SW2",
+      "7": "SW2",
+      "2": "GND",
+      "15": "GND"
+    },
+    "page": 2,
+    "sch": [
+      115,
+      85
+    ],
+    "pcb": [
+      112,
+      135,
+      0
+    ],
+    "fp": "Drone:TI_DSJ14_TPS63021",
+    "note": "Fixed3.3V; power-save mode; 1A electronics design target at VBAT>=3.0V subject to bench testing",
+    "onboard": true,
+    "uuid": "7dd2af71-42b5-50c7-9324-251abd0c0dba"
+  },
+  {
+    "ref": "L1",
+    "lib": "Device:L",
+    "value": "1.5uH XFL4020-152MEC",
+    "nets": {
+      "1": "SW1",
+      "2": "SW2"
+    },
+    "page": 2,
+    "sch": [
+      205,
+      85
+    ],
+    "pcb": [
+      112,
+      139,
+      0
+    ],
+    "fp": "Drone:XFL4020",
+    "note": "Coilcraft reference inductor; confirm exact suffix and DCR at sourcing",
+    "onboard": true,
+    "uuid": "10d19d64-ae82-5f0d-8fba-6aa116d66d35"
+  },
+  {
+    "ref": "C5",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      65,
+      155
+    ],
+    "pcb": [
+      115.5,
+      135,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "8c9dfe19-4eaf-5395-a1b1-962b9f5dc876"
+  },
+  {
+    "ref": "C6",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      115,
+      155
+    ],
+    "pcb": [
+      115.5,
+      137,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "d10054ab-7ccf-5e79-9aaf-290404bc0227"
+  },
+  {
+    "ref": "C7",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      165,
+      155
+    ],
+    "pcb": [
+      109,
+      132,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "345258e4-2ffe-5abc-96f5-666664afea21"
+  },
+  {
+    "ref": "C8",
+    "lib": "Device:C",
+    "value": "22uF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      215,
+      155
+    ],
+    "pcb": [
+      108,
+      135,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "note": "X5R 10V; verify effective capacitance under DC bias",
+    "onboard": true,
+    "uuid": "4fde1b32-60dc-55b7-9b4d-a57293996337"
+  },
+  {
+    "ref": "C9",
+    "lib": "Device:C",
+    "value": "22uF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      265,
+      155
+    ],
+    "pcb": [
+      108,
+      137,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "note": "X5R 10V; verify effective capacitance under DC bias",
+    "onboard": true,
+    "uuid": "74ba08a3-66bf-54df-9eb5-89be1a148db1"
+  },
+  {
+    "ref": "C10",
+    "lib": "Device:C",
+    "value": "22uF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      315,
+      155
+    ],
+    "pcb": [
+      108,
+      139,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0805_2012Metric",
+    "note": "X5R 10V; verify effective capacitance under DC bias",
+    "onboard": true,
+    "uuid": "b306420a-1174-51db-b576-a3e9129e1222"
+  },
+  {
+    "ref": "J2",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "1S LiPo 700mAh 20C",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      55,
+      85
+    ],
+    "pcb": [
+      125,
+      147,
+      0
+    ],
+    "fp": "Drone:Battery_2",
+    "note": "Direct solder pads; no charger or reverse-polarity protection; disconnect battery when unused",
+    "onboard": true,
+    "uuid": "3285ad6a-25b8-5f52-8526-44316f4c9e00"
+  },
+  {
+    "ref": "C11",
+    "lib": "Device:C_Polarized",
+    "value": "220uF 10V",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 2,
+    "sch": [
+      315,
+      85
+    ],
+    "pcb": [
+      119,
+      141,
+      0
+    ],
+    "fp": "Capacitor_SMD:CP_Elec_6.3x5.8",
+    "note": "Low ESR aluminum/polymer; ripple-current rating >=1A; final exact part depends on sourcing",
+    "onboard": true,
+    "uuid": "53296826-c6d1-541c-a9a2-262683ee57fc"
+  },
+  {
+    "ref": "U3",
+    "lib": "Sensor_Motion:MPU-6050",
+    "value": "MPU-6050",
+    "nets": {
+      "1": "GND",
+      "8": "IMU_3V3",
+      "9": "GND",
+      "10": "IMU_REGOUT",
+      "11": "GND",
+      "12": "IMU_INT",
+      "13": "IMU_3V3",
+      "18": "GND",
+      "20": "IMU_CPOUT",
+      "23": "IMU_SCL",
+      "24": "IMU_SDA"
+    },
+    "page": 3,
+    "sch": [
+      100,
+      80
+    ],
+    "pcb": [
+      125,
+      127,
+      0
+    ],
+    "fp": "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm",
+    "note": "I2C address0x68; use genuine bare chip, orientation must be calibrated in firmware",
+    "onboard": true,
+    "uuid": "432f2642-63af-5691-af4a-38fbc5f8111a"
+  },
+  {
+    "ref": "R5",
+    "lib": "Device:R",
+    "value": "10R",
+    "nets": {
+      "1": "3V3",
+      "2": "IMU_3V3"
+    },
+    "page": 3,
+    "sch": [
+      195,
+      55
+    ],
+    "pcb": [
+      122,
+      123,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "c5d6913b-5666-567c-94f4-d29e408e2787"
+  },
+  {
+    "ref": "C12",
+    "lib": "Device:C",
+    "value": "1uF",
+    "nets": {
+      "1": "IMU_3V3",
+      "2": "GND"
+    },
+    "page": 3,
+    "sch": [
+      245,
+      55
+    ],
+    "pcb": [
+      124,
+      123,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "e2eb14a2-f713-57b7-98e0-27fe1f71d86b"
+  },
+  {
+    "ref": "C13",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "IMU_3V3",
+      "2": "GND"
+    },
+    "page": 3,
+    "sch": [
+      195,
+      105
+    ],
+    "pcb": [
+      128,
+      125,
+      0
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "6ff5ceff-516e-583f-96e6-db3b3a814175"
+  },
+  {
+    "ref": "C14",
+    "lib": "Device:C",
+    "value": "10nF",
+    "nets": {
+      "1": "IMU_3V3",
+      "2": "GND"
+    },
+    "page": 3,
+    "sch": [
+      245,
+      105
+    ],
+    "pcb": [
+      122,
+      126,
+      0
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "2385f815-05ef-51a5-ae6d-0cd38e3ee202"
+  },
+  {
+    "ref": "C15",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "IMU_REGOUT",
+      "2": "GND"
+    },
+    "page": 3,
+    "sch": [
+      195,
+      155
+    ],
+    "pcb": [
+      122,
+      128,
+      0
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "8b3f0f9e-424d-5757-9084-3765c603dd76"
+  },
+  {
+    "ref": "C16",
+    "lib": "Device:C",
+    "value": "2.2nF 50V",
+    "nets": {
+      "1": "IMU_CPOUT",
+      "2": "GND"
+    },
+    "page": 3,
+    "sch": [
+      245,
+      155
+    ],
+    "pcb": [
+      126,
+      130,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R 50V +/-10%; charge pump capacitor",
+    "onboard": true,
+    "uuid": "25500edf-f020-5781-8f86-9bbf041b4152"
+  },
+  {
+    "ref": "R6",
+    "lib": "Device:R",
+    "value": "4.7k",
+    "nets": {
+      "1": "3V3",
+      "2": "IMU_SDA"
+    },
+    "page": 3,
+    "sch": [
+      195,
+      205
+    ],
+    "pcb": [
+      123,
+      131,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "af67fc08-5bb0-5c12-b7fe-173fb4d6d8f6"
+  },
+  {
+    "ref": "R7",
+    "lib": "Device:R",
+    "value": "4.7k",
+    "nets": {
+      "1": "3V3",
+      "2": "IMU_SCL"
+    },
+    "page": 3,
+    "sch": [
+      245,
+      205
+    ],
+    "pcb": [
+      121,
+      131,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "027ee774-43ef-5a8c-89a4-dfa0e2709047"
+  },
+  {
+    "ref": "J3",
+    "lib": "Drone:OV2640_FLEX_24",
+    "value": "OV2640 flex / FH12-24S-0.5SH(55)",
+    "nets": {
+      "3": "CAM_D2",
+      "4": "CAM_D1",
+      "5": "CAM_D3",
+      "6": "CAM_D0",
+      "7": "CAM_D4",
+      "8": "CAM_PCLK",
+      "9": "CAM_D5",
+      "10": "GND",
+      "11": "CAM_D6",
+      "12": "CAM_XCLK",
+      "13": "CAM_D7",
+      "14": "3V3",
+      "15": "CAM_1V2",
+      "16": "CAM_HREF",
+      "17": "CAM_PWDN",
+      "18": "CAM_VSYNC",
+      "19": "CAM_RESET",
+      "20": "CAM_SCL",
+      "21": "CAM_2V8",
+      "22": "CAM_SDA",
+      "23": "GND"
+    },
+    "page": 4,
+    "sch": [
+      90,
+      75
+    ],
+    "pcb": [
+      125,
+      136,
+      180
+    ],
+    "fp": "Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal",
+    "note": "ONLY pin-compatible 24pin0.5mm OV2640 flex; bottom-contact connector, confirm flex contact side/length before purchase",
+    "onboard": true,
+    "uuid": "462051dc-4020-5369-8e19-b40f7b01ebc0"
+  },
+  {
+    "ref": "U4",
+    "lib": "Regulator_Linear:TLV70012_SOT23-5",
+    "value": "TLV70028DDCR",
+    "nets": {
+      "1": "3V3",
+      "2": "GND",
+      "3": "3V3",
+      "5": "CAM_2V8"
+    },
+    "page": 4,
+    "sch": [
+      190,
+      65
+    ],
+    "pcb": [
+      134,
+      135,
+      0
+    ],
+    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "note": "2.8V analog camera rail,200mA",
+    "onboard": true,
+    "uuid": "822066c2-c2db-5910-aacd-91712ccf558b"
+  },
+  {
+    "ref": "U5",
+    "lib": "Regulator_Linear:TLV70012_SOT23-5",
+    "value": "TLV70012DDCR",
+    "nets": {
+      "1": "3V3",
+      "2": "GND",
+      "3": "3V3",
+      "5": "CAM_1V2"
+    },
+    "page": 4,
+    "sch": [
+      295,
+      65
+    ],
+    "pcb": [
+      139,
+      135,
+      0
+    ],
+    "fp": "Package_TO_SOT_SMD:SOT-23-5",
+    "note": "1.2V core camera rail,200mA",
+    "onboard": true,
+    "uuid": "131ce69b-1b21-5733-8f4a-0a8d5d0e0ed3"
+  },
+  {
+    "ref": "C17",
+    "lib": "Device:C",
+    "value": "1uF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      160,
+      130
+    ],
+    "pcb": [
+      135,
+      132,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "340bde50-e429-5713-b382-23125a06fae0"
+  },
+  {
+    "ref": "C18",
+    "lib": "Device:C",
+    "value": "1uF",
+    "nets": {
+      "1": "CAM_2V8",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      210,
+      130
+    ],
+    "pcb": [
+      134,
+      138,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "f52456cb-6f10-56cc-8385-2f8a1544bde2"
+  },
+  {
+    "ref": "C19",
+    "lib": "Device:C",
+    "value": "1uF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      260,
+      130
+    ],
+    "pcb": [
+      140,
+      132,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "48c48558-e68b-5ca2-9e27-79143e1a3a82"
+  },
+  {
+    "ref": "C20",
+    "lib": "Device:C",
+    "value": "1uF",
+    "nets": {
+      "1": "CAM_1V2",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      310,
+      130
+    ],
+    "pcb": [
+      139,
+      138,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "0cb0387a-439e-5232-9287-f3a27b49eb90"
+  },
+  {
+    "ref": "C21",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      65,
+      200
+    ],
+    "pcb": [
+      125.5,
+      140,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "da6bd938-3dcf-5288-a936-22bb3e9110d9"
+  },
+  {
+    "ref": "C22",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "CAM_2V8",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      115,
+      200
+    ],
+    "pcb": [
+      130,
+      140,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "70d733ed-f35e-57c1-81f6-3e46f8f105e3"
+  },
+  {
+    "ref": "C23",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "CAM_1V2",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      165,
+      200
+    ],
+    "pcb": [
+      128,
+      140,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "cb7e0417-b03b-5f43-b38a-2ef97c9e8aa4"
+  },
+  {
+    "ref": "R8",
+    "lib": "Device:R",
+    "value": "4.7k",
+    "nets": {
+      "1": "3V3",
+      "2": "CAM_SDA"
+    },
+    "page": 4,
+    "sch": [
+      215,
+      200
+    ],
+    "pcb": [
+      131,
+      132,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "fe867391-32e8-5410-bb43-c56a10476591"
+  },
+  {
+    "ref": "R9",
+    "lib": "Device:R",
+    "value": "4.7k",
+    "nets": {
+      "1": "3V3",
+      "2": "CAM_SCL"
+    },
+    "page": 4,
+    "sch": [
+      265,
+      200
+    ],
+    "pcb": [
+      133,
+      130,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "16d6c028-56de-511f-a879-70c1b97e85d9"
+  },
+  {
+    "ref": "R10",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "3V3",
+      "2": "CAM_RESET"
+    },
+    "page": 4,
+    "sch": [
+      315,
+      200
+    ],
+    "pcb": [
+      135,
+      130,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "14dae760-1f1e-53cc-97eb-3b4703953361"
+  },
+  {
+    "ref": "C24",
+    "lib": "Device:C",
+    "value": "100nF",
+    "nets": {
+      "1": "CAM_RESET",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      65,
+      250
+    ],
+    "pcb": [
+      137,
+      130,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0402_1005Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "17662db7-6786-5de1-b4ad-2fe109c15da7"
+  },
+  {
+    "ref": "R11",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "CAM_PWDN",
+      "2": "GND"
+    },
+    "page": 4,
+    "sch": [
+      150,
+      250
+    ],
+    "pcb": [
+      129,
+      132,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "823ac325-02c3-5669-b2dc-de35e4945d3b"
+  },
+  {
+    "ref": "R12",
+    "lib": "Device:R",
+    "value": "33R",
+    "nets": {
+      "1": "CAM_XCLK_SRC",
+      "2": "CAM_XCLK"
+    },
+    "page": 4,
+    "sch": [
+      240,
+      250
+    ],
+    "pcb": [
+      115,
+      114,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "Source series damping; tune with scope",
+    "onboard": true,
+    "uuid": "50466fea-cd96-5c7b-826f-0e347a523d2b"
+  },
+  {
+    "ref": "Q1",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A",
+    "nets": {
+      "1": "GATE1",
+      "2": "GND",
+      "3": "MOTOR1_NEG"
+    },
+    "page": 5,
+    "sch": [
+      65,
+      100
+    ],
+    "pcb": [
+      106,
+      113,
+      0
+    ],
+    "fp": "Package_TO_SOT_SMD:SOT-23",
+    "note": "SOT23 G1/S2/D3; verify stall current and heating with actual prop",
+    "onboard": true,
+    "uuid": "b9fb36d4-31f7-55cb-a490-f1b120b3c721"
+  },
+  {
+    "ref": "R13",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM1",
+      "2": "GATE1"
+    },
+    "page": 5,
+    "sch": [
+      65,
+      150
+    ],
+    "pcb": [
+      104,
+      110,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "90e099ea-fc78-5a59-bcc0-fea5fa28bfd6"
+  },
+  {
+    "ref": "R17",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE1",
+      "2": "GND"
+    },
+    "page": 5,
+    "sch": [
+      65,
+      200
+    ],
+    "pcb": [
+      106,
+      110,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "a28db320-ccf6-5048-9337-8d7418748bd2"
+  },
+  {
+    "ref": "D1",
+    "lib": "Device:D_Schottky",
+    "value": "SS34",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    },
+    "page": 5,
+    "sch": [
+      65,
+      50
+    ],
+    "pcb": [
+      106,
+      116,
+      0
+    ],
+    "fp": "Diode_SMD:D_SMA",
+    "note": "3A40V Schottky flyback; cathode pad1 to VBAT",
+    "onboard": true,
+    "uuid": "fac06368-d7c9-5d6f-b0b9-506db0399173"
+  },
+  {
+    "ref": "J4",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 motor 1",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    },
+    "page": 5,
+    "sch": [
+      65,
+      250
+    ],
+    "pcb": [
+      102,
+      113,
+      90
+    ],
+    "fp": "Drone:Motor_2",
+    "note": "Direct motor wire solder pads; motor body not on PCB",
+    "onboard": true,
+    "uuid": "1dc242c2-e8ae-58bb-a7ef-8d293b9dfb01"
+  },
+  {
+    "ref": "C25",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 6,
+    "sch": [
+      65,
+      60
+    ],
+    "pcb": [
+      108.5,
+      110,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "300a0e1d-f431-5a5d-a24f-0952d4d970e8"
+  },
+  {
+    "ref": "C101",
+    "lib": "Device:C",
+    "value": "100nF 16V motor-mounted",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    },
+    "page": 6,
+    "sch": [
+      65,
+      120
+    ],
+    "pcb": [
+      0,
+      0,
+      0
+    ],
+    "fp": "",
+    "note": "Solder directly across motor terminals; included in BOM, off-board",
+    "onboard": false,
+    "uuid": "a4c5f894-fa27-5af3-8c88-15cdb7dd87e3"
+  },
+  {
+    "ref": "Q2",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A",
+    "nets": {
+      "1": "GATE2",
+      "2": "GND",
+      "3": "MOTOR2_NEG"
+    },
+    "page": 5,
+    "sch": [
+      160,
+      100
+    ],
+    "pcb": [
+      144,
+      113,
+      0
+    ],
+    "fp": "Package_TO_SOT_SMD:SOT-23",
+    "note": "SOT23 G1/S2/D3; verify stall current and heating with actual prop",
+    "onboard": true,
+    "uuid": "aa142f7b-21eb-564d-b816-3d1b634368c9"
+  },
+  {
+    "ref": "R14",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM2",
+      "2": "GATE2"
+    },
+    "page": 5,
+    "sch": [
+      160,
+      150
+    ],
+    "pcb": [
+      142,
+      110,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "4ef84fe7-de65-5660-b510-c5159ef8e778"
+  },
+  {
+    "ref": "R18",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE2",
+      "2": "GND"
+    },
+    "page": 5,
+    "sch": [
+      160,
+      200
+    ],
+    "pcb": [
+      144,
+      110,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "27af3f2d-bbf9-57b3-8af3-cf8bc67cba3f"
+  },
+  {
+    "ref": "D2",
+    "lib": "Device:D_Schottky",
+    "value": "SS34",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    },
+    "page": 5,
+    "sch": [
+      160,
+      50
+    ],
+    "pcb": [
+      144,
+      116,
+      0
+    ],
+    "fp": "Diode_SMD:D_SMA",
+    "note": "3A40V Schottky flyback; cathode pad1 to VBAT",
+    "onboard": true,
+    "uuid": "b6db49bd-7df9-5e17-ba55-54c9e4075609"
+  },
+  {
+    "ref": "J5",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 motor 2",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    },
+    "page": 5,
+    "sch": [
+      160,
+      250
+    ],
+    "pcb": [
+      148,
+      113,
+      90
+    ],
+    "fp": "Drone:Motor_2",
+    "note": "Direct motor wire solder pads; motor body not on PCB",
+    "onboard": true,
+    "uuid": "0eb41219-31d1-54db-89e7-8bf1affb0df8"
+  },
+  {
+    "ref": "C26",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 6,
+    "sch": [
+      160,
+      60
+    ],
+    "pcb": [
+      146.5,
+      110,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "fbd066e4-e77a-5b64-baaf-9a24054d56fd"
+  },
+  {
+    "ref": "C102",
+    "lib": "Device:C",
+    "value": "100nF 16V motor-mounted",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    },
+    "page": 6,
+    "sch": [
+      160,
+      120
+    ],
+    "pcb": [
+      0,
+      0,
+      0
+    ],
+    "fp": "",
+    "note": "Solder directly across motor terminals; included in BOM, off-board",
+    "onboard": false,
+    "uuid": "9abe76d1-0a4e-5e3d-9450-c1266028b2b4"
+  },
+  {
+    "ref": "Q3",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A",
+    "nets": {
+      "1": "GATE3",
+      "2": "GND",
+      "3": "MOTOR3_NEG"
+    },
+    "page": 5,
+    "sch": [
+      255,
+      100
+    ],
+    "pcb": [
+      106,
+      143,
+      0
+    ],
+    "fp": "Package_TO_SOT_SMD:SOT-23",
+    "note": "SOT23 G1/S2/D3; verify stall current and heating with actual prop",
+    "onboard": true,
+    "uuid": "4bc24c89-cdc4-508e-b548-95eef71dc990"
+  },
+  {
+    "ref": "R15",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM3",
+      "2": "GATE3"
+    },
+    "page": 5,
+    "sch": [
+      255,
+      150
+    ],
+    "pcb": [
+      104,
+      140,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "6a79a2ec-c195-5288-b05c-3e2a115f2872"
+  },
+  {
+    "ref": "R19",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE3",
+      "2": "GND"
+    },
+    "page": 5,
+    "sch": [
+      255,
+      200
+    ],
+    "pcb": [
+      106,
+      140,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "6b76c6a1-f8db-58d9-b04b-f55e0366cf45"
+  },
+  {
+    "ref": "D3",
+    "lib": "Device:D_Schottky",
+    "value": "SS34",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    },
+    "page": 5,
+    "sch": [
+      255,
+      50
+    ],
+    "pcb": [
+      106,
+      146,
+      0
+    ],
+    "fp": "Diode_SMD:D_SMA",
+    "note": "3A40V Schottky flyback; cathode pad1 to VBAT",
+    "onboard": true,
+    "uuid": "c5b8328b-d198-54ba-8945-8c058620a103"
+  },
+  {
+    "ref": "J6",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 motor 3",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    },
+    "page": 5,
+    "sch": [
+      255,
+      250
+    ],
+    "pcb": [
+      102,
+      143,
+      90
+    ],
+    "fp": "Drone:Motor_2",
+    "note": "Direct motor wire solder pads; motor body not on PCB",
+    "onboard": true,
+    "uuid": "1043b47b-9f8f-5374-b3a5-1022fa17eac2"
+  },
+  {
+    "ref": "C27",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 6,
+    "sch": [
+      255,
+      60
+    ],
+    "pcb": [
+      108.5,
+      140,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "eeca2d7f-e503-53c5-b26f-a4307148b187"
+  },
+  {
+    "ref": "C103",
+    "lib": "Device:C",
+    "value": "100nF 16V motor-mounted",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    },
+    "page": 6,
+    "sch": [
+      255,
+      120
+    ],
+    "pcb": [
+      0,
+      0,
+      0
+    ],
+    "fp": "",
+    "note": "Solder directly across motor terminals; included in BOM, off-board",
+    "onboard": false,
+    "uuid": "65fbefab-d270-5a30-aecc-b5091d030124"
+  },
+  {
+    "ref": "Q4",
+    "lib": "Transistor_FET:AO3400A",
+    "value": "AO3400A",
+    "nets": {
+      "1": "GATE4",
+      "2": "GND",
+      "3": "MOTOR4_NEG"
+    },
+    "page": 5,
+    "sch": [
+      350,
+      100
+    ],
+    "pcb": [
+      144,
+      143,
+      0
+    ],
+    "fp": "Package_TO_SOT_SMD:SOT-23",
+    "note": "SOT23 G1/S2/D3; verify stall current and heating with actual prop",
+    "onboard": true,
+    "uuid": "281738f4-463e-5dbc-8618-5f2a9981502f"
+  },
+  {
+    "ref": "R16",
+    "lib": "Device:R",
+    "value": "100R",
+    "nets": {
+      "1": "PWM4",
+      "2": "GATE4"
+    },
+    "page": 5,
+    "sch": [
+      350,
+      150
+    ],
+    "pcb": [
+      142,
+      140,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "ca109a6d-cee1-5d41-a1a2-cc539dfb1c0b"
+  },
+  {
+    "ref": "R20",
+    "lib": "Device:R",
+    "value": "10k",
+    "nets": {
+      "1": "GATE4",
+      "2": "GND"
+    },
+    "page": 5,
+    "sch": [
+      350,
+      200
+    ],
+    "pcb": [
+      144,
+      140,
+      90
+    ],
+    "fp": "Resistor_SMD:R_0402_1005Metric",
+    "note": "1%, 0402",
+    "onboard": true,
+    "uuid": "c886669e-ac1f-557d-8855-c3a226dc5b18"
+  },
+  {
+    "ref": "D4",
+    "lib": "Device:D_Schottky",
+    "value": "SS34",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    },
+    "page": 5,
+    "sch": [
+      350,
+      50
+    ],
+    "pcb": [
+      144,
+      146,
+      0
+    ],
+    "fp": "Diode_SMD:D_SMA",
+    "note": "3A40V Schottky flyback; cathode pad1 to VBAT",
+    "onboard": true,
+    "uuid": "5bf6d8eb-2c87-5289-a212-5b95094c3e54"
+  },
+  {
+    "ref": "J7",
+    "lib": "Connector_Generic:Conn_01x02",
+    "value": "8520 motor 4",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    },
+    "page": 5,
+    "sch": [
+      350,
+      250
+    ],
+    "pcb": [
+      148,
+      143,
+      90
+    ],
+    "fp": "Drone:Motor_2",
+    "note": "Direct motor wire solder pads; motor body not on PCB",
+    "onboard": true,
+    "uuid": "2fdaef6c-2094-5e2e-a4e5-8b2119d40ec0"
+  },
+  {
+    "ref": "C28",
+    "lib": "Device:C",
+    "value": "10uF",
+    "nets": {
+      "1": "VBAT",
+      "2": "GND"
+    },
+    "page": 6,
+    "sch": [
+      350,
+      60
+    ],
+    "pcb": [
+      146.5,
+      140,
+      90
+    ],
+    "fp": "Capacitor_SMD:C_0603_1608Metric",
+    "note": "X7R, 10V; use specified voltage where marked",
+    "onboard": true,
+    "uuid": "c14e2362-606e-508b-868c-22a08dc742b3"
+  },
+  {
+    "ref": "C104",
+    "lib": "Device:C",
+    "value": "100nF 16V motor-mounted",
+    "nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    },
+    "page": 6,
+    "sch": [
+      350,
+      120
+    ],
+    "pcb": [
+      0,
+      0,
+      0
+    ],
+    "fp": "",
+    "note": "Solder directly across motor terminals; included in BOM, off-board",
+    "onboard": false,
+    "uuid": "2e54dd26-ec45-570a-8aa7-31a61a964bb6"
+  }
+]

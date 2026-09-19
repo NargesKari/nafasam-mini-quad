@@ -1,0 +1,74 @@
+{
+  "status": "Engineering prototype; not released for manufacture or flight",
+  "generated_utc": "2026-09-07T18:43:07.922994+00:00",
+  "kicad_version": "10.0.6",
+  "board": {
+    "width_mm": 50,
+    "height_mm": 50,
+    "thickness_mm": 0.8,
+    "copper_layers": 4,
+    "motor_drain_track_width_mm": 0.8,
+    "finished_copper_target_um": 35
+  },
+  "checks": {
+    "erc_violations": 0,
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "connected_pins_compared": 240,
+    "pin_net_mismatches": 0
+  },
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "drc_ignored_checks": [
+    {
+      "description": "Footprint has no courtyard defined",
+      "key": "missing_courtyard"
+    },
+    {
+      "description": "Track endpoint not centered on via",
+      "key": "track_not_centered_on_via"
+    },
+    {
+      "description": "Tuning profile track geometries",
+      "key": "tuning_profile_track_geometries"
+    },
+    {
+      "description": "Footprint doesn't match symbol's footprint filters",
+      "key": "footprint_filters_mismatch"
+    },
+    {
+      "description": "Footprint component type doesn't match footprint pads",
+      "key": "footprint_type_mismatch"
+    }
+  ],
+  "pending": [
+    "Exact camera flex pinout and mechanical compatibility",
+    "C11 manufacturer part number, ESR and ripple rating",
+    "Manufacturer stackup and assembler stencil/via treatment",
+    "Motor stall/startup and battery sag measurements",
+    "Power transient, thermal, IMU and camera bench tests",
+    "Flight firmware implementation and testing",
+    "Actual assembled mass, efficiency and thrust margin"
+  ],
+  "sha256": {
+    "design/DroneFC.kicad_pcb": "53e8122c6f9b57f30af9e6bcb2f0240185a6ec74a6a42ad4f9ad688f81f7d661",
+    "design/DroneFC.kicad_sch": "37b34e431b1910270dcac4925906c08b04e377d0e4fe693d7e2103946f5f54e1",
+    "BOM.csv": "6359234a88afa3a97754a5d2af7de50381493ac2a462e4167ceb2ca29cc92bad"
+  }
+}

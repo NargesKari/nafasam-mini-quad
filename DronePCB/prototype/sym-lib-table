@@ -1,0 +1,6 @@
+(sym_lib_table (version 7)
+(lib (name "Connector_Generic") (type "KiCad") (uri "${KIPRJMOD}/Connector_Generic.kicad_sym") (options "") (descr "Portable symbols"))
+(lib (name "Device") (type "KiCad") (uri "${KIPRJMOD}/Device.kicad_sym") (options "") (descr "Portable symbols"))
+(lib (name "Perfboard") (type "KiCad") (uri "${KIPRJMOD}/Perfboard.kicad_sym") (options "") (descr "Portable symbols"))
+(lib (name "Transistor_FET") (type "KiCad") (uri "${KIPRJMOD}/Transistor_FET.kicad_sym") (options "") (descr "Portable symbols"))
+(lib (name "power") (type "KiCad") (uri "${KIPRJMOD}/power.kicad_sym") (options "") (descr "Portable symbols")))

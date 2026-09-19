@@ -1,0 +1,184 @@
+{
+  "U1": {
+    "part": "ESP32-S3-MINI-1-N4R2",
+    "pin_nets": {
+      "1": "GND",
+      "2": "GND",
+      "42": "GND",
+      "43": "GND",
+      "46": "GND",
+      "47": "GND",
+      "48": "GND",
+      "49": "GND",
+      "50": "GND",
+      "51": "GND",
+      "52": "GND",
+      "53": "GND",
+      "54": "GND",
+      "55": "GND",
+      "56": "GND",
+      "57": "GND",
+      "58": "GND",
+      "59": "GND",
+      "60": "GND",
+      "61": "GND",
+      "62": "GND",
+      "63": "GND",
+      "64": "GND",
+      "65": "GND",
+      "3": "3V3",
+      "4": "BOOT",
+      "5": "VBAT_SENSE",
+      "8": "CAM_PWDN",
+      "9": "CAM_SDA",
+      "10": "CAM_SCL",
+      "11": "CAM_XCLK_SRC",
+      "20": "CAM_PCLK",
+      "21": "CAM_HREF",
+      "22": "CAM_VSYNC",
+      "25": "IMU_INT",
+      "28": "IMU_SDA",
+      "29": "IMU_SCL",
+      "35": "PWM1",
+      "36": "PWM2",
+      "37": "PWM3",
+      "38": "PWM4",
+      "39": "UART_TX",
+      "40": "UART_RX",
+      "45": "ESP_EN",
+      "12": "CAM_D0",
+      "13": "CAM_D1",
+      "14": "CAM_D2",
+      "15": "CAM_D3",
+      "16": "CAM_D4",
+      "17": "CAM_D5",
+      "18": "CAM_D6",
+      "19": "CAM_D7"
+    }
+  },
+  "J1": {
+    "part": "3.3V UART programmer pads",
+    "pin_nets": {
+      "1": "GND",
+      "2": "3V3",
+      "3": "UART_TX",
+      "4": "UART_RX",
+      "5": "BOOT",
+      "6": "ESP_EN"
+    }
+  },
+  "U2": {
+    "part": "TPS63021DSJR",
+    "pin_nets": {
+      "1": "VBAT",
+      "10": "VBAT",
+      "11": "VBAT",
+      "12": "VBAT",
+      "13": "GND",
+      "8": "SW1",
+      "9": "SW1",
+      "4": "3V3",
+      "5": "3V3",
+      "3": "3V3",
+      "6": "SW2",
+      "7": "SW2",
+      "2": "GND",
+      "15": "GND"
+    }
+  },
+  "J2": {
+    "part": "1S LiPo 700mAh 20C",
+    "pin_nets": {
+      "1": "VBAT",
+      "2": "GND"
+    }
+  },
+  "U3": {
+    "part": "MPU-6050",
+    "pin_nets": {
+      "1": "GND",
+      "8": "IMU_3V3",
+      "9": "GND",
+      "10": "IMU_REGOUT",
+      "11": "GND",
+      "12": "IMU_INT",
+      "13": "IMU_3V3",
+      "18": "GND",
+      "20": "IMU_CPOUT",
+      "23": "IMU_SCL",
+      "24": "IMU_SDA"
+    }
+  },
+  "J3": {
+    "part": "OV2640 flex / FH12-24S-0.5SH(55)",
+    "pin_nets": {
+      "3": "CAM_D2",
+      "4": "CAM_D1",
+      "5": "CAM_D3",
+      "6": "CAM_D0",
+      "7": "CAM_D4",
+      "8": "CAM_PCLK",
+      "9": "CAM_D5",
+      "10": "GND",
+      "11": "CAM_D6",
+      "12": "CAM_XCLK",
+      "13": "CAM_D7",
+      "14": "3V3",
+      "15": "CAM_1V2",
+      "16": "CAM_HREF",
+      "17": "CAM_PWDN",
+      "18": "CAM_VSYNC",
+      "19": "CAM_RESET",
+      "20": "CAM_SCL",
+      "21": "CAM_2V8",
+      "22": "CAM_SDA",
+      "23": "GND"
+    }
+  },
+  "U4": {
+    "part": "TLV70028DDCR",
+    "pin_nets": {
+      "1": "3V3",
+      "2": "GND",
+      "3": "3V3",
+      "5": "CAM_2V8"
+    }
+  },
+  "U5": {
+    "part": "TLV70012DDCR",
+    "pin_nets": {
+      "1": "3V3",
+      "2": "GND",
+      "3": "3V3",
+      "5": "CAM_1V2"
+    }
+  },
+  "J4": {
+    "part": "8520 motor 1",
+    "pin_nets": {
+      "1": "VBAT",
+      "2": "MOTOR1_NEG"
+    }
+  },
+  "J5": {
+    "part": "8520 motor 2",
+    "pin_nets": {
+      "1": "VBAT",
+      "2": "MOTOR2_NEG"
+    }
+  },
+  "J6": {
+    "part": "8520 motor 3",
+    "pin_nets": {
+      "1": "VBAT",
+      "2": "MOTOR3_NEG"
+    }
+  },
+  "J7": {
+    "part": "8520 motor 4",
+    "pin_nets": {
+      "1": "VBAT",
+      "2": "MOTOR4_NEG"
+    }
+  }
+}

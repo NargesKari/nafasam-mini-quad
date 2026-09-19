@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-07T22:12:25",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae",
+            "violations": []
+        },
+        {
+            "path": "/Controller and programming/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae/67678e91-daac-547a-bc01-d75feddf033c",
+            "violations": []
+        },
+        {
+            "path": "/Battery and 3.3V buck-boost/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae/c9ebcbd2-d687-5361-97aa-50e99406e084",
+            "violations": []
+        },
+        {
+            "path": "/MPU-6050 inertial sensor/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae/7b9829a2-1db7-57d4-9e6d-d82751c6dbe2",
+            "violations": []
+        },
+        {
+            "path": "/OV2640 camera interface/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae/ef1552b5-441a-580f-b263-e8f6b9693d45",
+            "violations": []
+        },
+        {
+            "path": "/Four brushed motor drivers/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae/becf5d8c-2e0d-5e54-9b73-fe11c06d3cc5",
+            "violations": []
+        },
+        {
+            "path": "/Motor decoupling and assembly notes/",
+            "uuid_path": "/7348d962-cf5c-543d-8ecb-ac88f13d97ae/c281c2a1-740e-5ab2-864e-146cf750bc39",
+            "violations": []
+        }
+    ],
+    "source": "DroneFC.kicad_sch"
+}

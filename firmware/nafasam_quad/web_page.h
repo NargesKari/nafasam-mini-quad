@@ -10,7 +10,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<title>nafasm</title>
+<title>Nafasam</title>
 <style>
   :root {
     --bg: #0b0f17; --panel: #131a26; --line: #243146; --text: #e6edf7; --dim: #7d8ca5;
@@ -41,6 +41,7 @@ const char index_html[] PROGMEM = R"rawliteral(
   .chip.on { color: var(--text); }
   .chip.on i { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
   #chipArm.on i { background: var(--warn); box-shadow: 0 0 8px var(--warn); }
+  #chipBat.on i { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
   #helpBtn {
     width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel);
     color: var(--accent); font-size: 17px; font-weight: 700; cursor: pointer;
@@ -109,11 +110,12 @@ const char index_html[] PROGMEM = R"rawliteral(
 
 <div id="app">
   <header>
-    <div class="brand">NAF<b>A</b>SM</div>
+    <div class="brand">NAF<b>A</b>SAM</div>
     <div class="chips">
       <div class="chip" id="chipLink"><i></i>LINK</div>
       <div class="chip" id="chipImu"><i></i>IMU</div>
       <div class="chip" id="chipArm"><i></i>ARMED</div>
+      <div class="chip" id="chipBat"><i></i><span id="txtBat">--V</span></div>
     </div>
     <button id="helpBtn" aria-label="Help">?</button>
   </header>
@@ -140,7 +142,7 @@ const char index_html[] PROGMEM = R"rawliteral(
     <h2>HOW TO FLY</h2>
     <ul>
       <li>Place the drone <b>flat and still</b>, then power it. It calibrates the gyro on boot; wait for the <b>IMU</b> light.</li>
-      <li>Connect this phone to the <b>nafasm</b> WiFi and open <b>192.168.4.1</b>. The <b>LINK</b> light shows the connection.</li>
+      <li>Connect this phone to the <b>Nafasam</b> WiFi and open <b>192.168.4.1</b>. The <b>LINK</b> light shows the connection.</li>
       <li>Keep <b>throttle at zero</b>, then press <b>ARM</b>. Arming is refused if throttle is up.</li>
       <li><b>Left stick</b>: up/down = throttle, left/right = yaw (turn). Throttle drops to zero when you let go.</li>
       <li><b>Right stick</b>: up/down = pitch (forward/back), left/right = roll (sideways). It self-levels when centred.</li>
@@ -247,6 +249,10 @@ const char index_html[] PROGMEM = R"rawliteral(
       .then(function (s) {
         fails = 0;
         chip('chipLink', true); chip('chipImu', s.imu); chip('chipArm', s.armed);
+        if (s.vbat !== undefined && s.vbat > 0) {
+          $('txtBat').textContent = s.vbat.toFixed(1) + 'V';
+          chip('chipBat', s.vbat >= 3.3);
+        }
         if (armWanted && !s.armed) {
           if (++refused >= 4) {
             setArm(false);
@@ -259,7 +265,7 @@ const char index_html[] PROGMEM = R"rawliteral(
       })
       .catch(function () {
         if (++fails >= 3) {
-          chip('chipLink', false); chip('chipImu', false); chip('chipArm', false);
+          chip('chipLink', false); chip('chipImu', false); chip('chipArm', false); chip('chipBat', false);
           if (armWanted) setArm(false);
         }
       })

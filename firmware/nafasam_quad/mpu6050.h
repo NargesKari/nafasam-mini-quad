@@ -8,6 +8,12 @@ struct MpuData {
   float temp;         // deg C
 };
 
+struct ImuCal {
+  float gyroBias[3];   // Gyroscope zero-rate offsets [X, Y, Z]
+  float rollOffset;    // Accelerometer roll zero trim at boot
+  float pitchOffset;   // Accelerometer pitch zero trim at boot
+};
+
 // Minimal register-level MPU6050 driver (no external library).
 class Mpu6050 {
 public:

@@ -14,7 +14,7 @@ A phone-to-ESP32 wireless control link for a quadcopter, built around a hand-spe
 
 The protocol doc is written as the actual contract between three planned clients (webapp, future Android app, firmware) rather than being implicit in the code — it specifies not just the byte layout but the *reasoning*: why WebSocket-over-TCP was chosen for v1 despite the latency cost (browsers can't open raw UDP sockets), why the checksum exists even though TCP already guarantees integrity (it becomes load-bearing the moment the transport moves to UDP), and why control packets are sent unconditionally at 50Hz instead of only on change (a single dropped packet self-corrects in 20ms instead of leaving the drone stuck on stale input). That's the kind of protocol design that usually only shows up after a project has already been burned by not having it.
 
-The current state is honest about what's actually flight-ready: `main.cpp` receives, validates, and fails-safe on control packets correctly, but motor mixing and IMU calibration are explicit `TODO`s in the control loop — this is the wireless control link for a quadcopter, not yet a quadcopter that flies. That's a reasonable place to draw a v1 boundary: get the link layer's failure modes (dropped packets, corrupted packets, phone walking out of range, emergency stop) solid before writing flight-critical code on top of it.
+The current state is honest about what's actually flight-ready: `nafasam_quad.ino` receives, validates, and fails-safe on control packets correctly, but motor mixing and IMU calibration are explicit `TODO`s in the control loop — this is the wireless control link for a quadcopter, not yet a quadcopter that flies. That's a reasonable place to draw a v1 boundary: get the link layer's failure modes (dropped packets, corrupted packets, phone walking out of range, emergency stop) solid before writing flight-critical code on top of it.
 
 ## Tech stack
 
@@ -26,20 +26,20 @@ The current state is honest about what's actually flight-ready: `main.cpp` recei
 
 ## Getting started
 
-Build and flash the firmware with PlatformIO or the Arduino IDE (needs the `ESPAsyncWebServer` and `AsyncTCP` libraries) targeting an ESP32 board — `firmware/src/main.cpp` is the entry point.
+Build and flash the firmware with the Arduino IDE (needs the `ESPAsyncWebServer` and `AsyncTCP` libraries) targeting an ESP32 board — `firmware/nafasam_quad/nafasam_quad.ino` is the entry point.
 
 If you edit the control page:
 
 ```bash
 # edit web/public/index.html, then regenerate the firmware header
 python3 scripts/generate_web_header.py
-# re-flash firmware/src/main.cpp
+# re-flash firmware/nafasam_quad/nafasam_quad.ino
 ```
 
 To fly (once motor mixing is implemented): connect a phone to the `Drone-01` WiFi network (password `drone1234`) and open `http://192.168.4.1/`.
 
 ## Architecture
 
-`web/public/index.html` is the single source of truth for the control UI; `scripts/generate_web_header.py` compiles it into a `PROGMEM` C string (`firmware/include/web_page.h`) so the ESP32 can serve it without a filesystem. The firmware itself splits control-packet handling (an async WebSocket event callback that writes to `volatile` shared state) from the main loop (which reads that state, applies the kill/failsafe overrides, and will eventually drive the motors) — the two run on different execution contexts, which is why the shared variables are `volatile`.
+`web/public/index.html` is the single source of truth for the control UI; `scripts/generate_web_header.py` compiles it into a `PROGMEM` C string (`firmware/nafasam_quad/web_page.h`) so the ESP32 can serve it without a filesystem. The firmware itself splits control-packet handling (an async WebSocket event callback that writes to `volatile` shared state) from the main loop (which reads that state, applies the kill/failsafe overrides, and will eventually drive the motors) — the two run on different execution contexts, which is why the shared variables are `volatile`.
 
 <!-- add screenshot/demo here -->

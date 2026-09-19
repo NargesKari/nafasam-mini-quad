@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Regenerates firmware/include/web_page.h from web/public/index.html.
+Regenerates firmware/nafasam_quad/web_page.h from web/public/index.html.
 
 web/public/index.html is the single source of truth for the control page.
 Run this script every time you edit that file, then re-flash the firmware.
@@ -13,7 +13,7 @@ import os
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE_HTML = os.path.join(REPO_ROOT, "web", "public", "index.html")
-OUTPUT_HEADER = os.path.join(REPO_ROOT, "firmware", "include", "web_page.h")
+OUTPUT_HEADER = os.path.join(REPO_ROOT, "firmware", "nafasam_quad", "web_page.h")
 
 
 def main():

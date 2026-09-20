@@ -1,20 +1,20 @@
 // ============================================================================
 // Nafasam Mini Quad - Flight Controller Firmware
-// Hardware Target: ESP32-S3-MINI-1-N4R2, DroneFC PCB Revision A0
+// Original PCB target: ESP32-S3-MINI-1-N4R2, DroneFC PCB Revision A0 (custom pin map)
 //
 // Dual-Core FreeRTOS Architecture:
 //   Core 0: 200 Hz Flight Control Loop (IMU read -> Fusion -> PID -> Mixer -> PWM)
 //   Core 1: WiFi AP ("Nafasam") + esp_http_server (serves web UI, receives /control)
 //
-// Hardware Pinout (from DronePCB / drone_pins.h):
-//   - Motor 1 (J4, Front-Left,  CW):  GPIO 39 (PWM1)
-//   - Motor 2 (J5, Front-Right, CCW): GPIO 40 (PWM2)
-//   - Motor 3 (J6, Rear-Left,   CCW): GPIO 41 (PWM3)
-//   - Motor 4 (J7, Rear-Right,  CW):  GPIO 42 (PWM4)
-//   - IMU I2C SDA:                    GPIO 33 (DroneFC IMU_SDA)
-//   - IMU I2C SCL:                    GPIO 34 (DroneFC IMU_SCL)
-//   - IMU INT:                        GPIO 21 (DroneFC IMU_INT)
-//   - Battery Sense (100k/100k ADC):  GPIO 1  (DroneFC VBAT_SENSE)
+// Hardware Pinout (custom map, see config.h):
+//   - Motor 1 (J4, Front-Left,  CW):  GPIO 23 (PWM1)
+//   - Motor 2 (J5, Front-Right, CCW): GPIO 22 (PWM2)
+//   - Motor 3 (J6, Rear-Left,   CCW): GPIO 35 (PWM3)
+//   - Motor 4 (J7, Rear-Right,  CW):  GPIO 34 (PWM4)
+//   - IMU I2C SDA:                    GPIO 18
+//   - IMU I2C SCL:                    GPIO 19
+//   - IMU INT:                        GPIO 21
+//   - Battery Sense (100k/100k ADC):  GPIO 1  (VBAT_SENSE, unchanged)
 //
 // Sensor Alignment on DroneFC PCB:
 //   PCB Top Edge (ESP32 antenna) = NOSE / FORWARD (+Y drone)
@@ -39,6 +39,8 @@
 #include <Wire.h>
 #include <esp_http_server.h>
 #include <math.h>
+#include <driver/gpio.h>
+#include <esp_system.h>
 
 #include "config.h"
 #include "mpu6050.h"
@@ -74,11 +76,16 @@ static volatile float g_vbat        = 0.0f;    // Battery voltage (V)
 
 enum { M_FL = 0, M_FR = 1, M_RL = 2, M_RR = 3 };
 static const uint8_t MOTOR_PINS[4] = {
-  PIN_MOTOR_FL, // Motor 1: Front-Left  (CW)  -> GPIO 39
-  PIN_MOTOR_FR, // Motor 2: Front-Right (CCW) -> GPIO 40
-  PIN_MOTOR_RL, // Motor 3: Rear-Left   (CCW) -> GPIO 41
-  PIN_MOTOR_RR  // Motor 4: Rear-Right  (CW)  -> GPIO 42
+  PIN_MOTOR_FL, // Motor 1: Front-Left  (CW)  -> GPIO 23
+  PIN_MOTOR_FR, // Motor 2: Front-Right (CCW) -> GPIO 22
+  PIN_MOTOR_RL, // Motor 3: Rear-Left   (CCW) -> GPIO 35
+  PIN_MOTOR_RR  // Motor 4: Rear-Right  (CW)  -> GPIO 34
 };
+
+// Per-motor "pin can really output PWM" flags, filled in by motorsInit().
+// Some GPIOs are input-only (e.g. GPIO 34..39 on the classic ESP32).
+static bool g_motorPinOk[4]  = {false, false, false, false};
+static bool g_allMotorsOk    = false;   // Arming is refused unless all 4 are OK
 
 static inline float clampf(float v, float lo, float hi) {
   return (v < lo) ? lo : ((v > hi) ? hi : v);
@@ -89,6 +96,7 @@ static void motorsWrite(const float duty[4]) {
   for (int i = 0; i < 4; i++) {
     float v = clampf(duty[i], 0.0f, MOTOR_MAX_THROTTLE);
     g_dbgMotor[i] = v;
+    if (!g_motorPinOk[i]) continue;   // pin cannot output, never touch LEDC
     uint32_t rawDuty = (uint32_t)(v * (float)PWM_MAX_DUTY);
     ledcWrite(MOTOR_PINS[i], rawDuty);
   }
@@ -102,18 +110,36 @@ static void motorsOff() {
 
 // Configure GPIOs and attach LEDC PWM timers
 static void motorsInit() {
+  g_allMotorsOk = true;
+
   // CRITICAL HARDWARE SAFETY: Force all motor gate lines LOW before starting peripherals
   for (int i = 0; i < 4; i++) {
+    g_motorPinOk[i] = GPIO_IS_VALID_OUTPUT_GPIO((int)MOTOR_PINS[i]);
+    if (!g_motorPinOk[i]) {
+      Serial.printf("Motors: GPIO %d (motor %d) cannot be used as an output on this chip!\n",
+                    MOTOR_PINS[i], i + 1);
+      g_allMotorsOk = false;
+      continue;
+    }
     pinMode(MOTOR_PINS[i], OUTPUT);
     digitalWrite(MOTOR_PINS[i], LOW);
   }
 
-  // Attach ESP32-S3 LEDC PWM channels (Arduino ESP32 Core v3.x API)
+  // Attach LEDC PWM channels (Arduino ESP32 Core v3.x API)
   for (int i = 0; i < 4; i++) {
-    ledcAttach(MOTOR_PINS[i], PWM_FREQ_HZ, PWM_RES_BITS);
+    if (!g_motorPinOk[i]) continue;
+    if (!ledcAttach(MOTOR_PINS[i], PWM_FREQ_HZ, PWM_RES_BITS)) {
+      Serial.printf("Motors: LEDC attach failed on GPIO %d (motor %d)\n", MOTOR_PINS[i], i + 1);
+      g_motorPinOk[i] = false;
+      g_allMotorsOk = false;
+    }
   }
 
   motorsOff();
+
+  if (!g_allMotorsOk) {
+    Serial.println("Motors: ARMING DISABLED until all 4 motor pins are valid outputs (see config.h)");
+  }
 }
 
 // ----------------------------------------------------------------------------
@@ -121,7 +147,7 @@ static void motorsInit() {
 // ----------------------------------------------------------------------------
 
 static float readBatteryVoltage() {
-  // ESP32-S3 calibrated ADC readout in millivolts
+  // Calibrated ADC readout in millivolts
   uint32_t mv = analogReadMilliVolts(PIN_BATTERY_ADC);
   return (float)mv * BATTERY_DIVIDER_RATIO / 1000.0f;
 }
@@ -153,7 +179,8 @@ static bool imuStartup(ImuCal &cal) {
   Wire.setTimeOut(I2C_TIMEOUT_MS);
 
   if (!mpu.begin(Wire, DRONE_IMU_I2C_ADDR)) {
-    Serial.println("MPU-6050: Connection failed! Check wiring on SDA:GPIO33, SCL:GPIO34");
+    Serial.printf("MPU-6050: Connection failed! Check wiring on SDA:GPIO%d, SCL:GPIO%d\n",
+                  PIN_I2C_SDA, PIN_I2C_SCL);
     return false;
   }
 
@@ -316,6 +343,12 @@ static void flightTask(void *param) {
       wantArm = false;
     }
 
+    // - Refuse to arm if any motor pin cannot drive an output (checked at boot)
+    if (wantArm && !g_allMotorsOk) {
+      armLock = true;
+      wantArm = false;
+    }
+
     armed = wantArm;
     g_armedActive = armed;
 
@@ -467,13 +500,27 @@ static void startWebServer() {
 // Arduino Setup & Loop
 // ----------------------------------------------------------------------------
 
+static const char *resetReasonStr(esp_reset_reason_t r) {
+  switch (r) {
+    case ESP_RST_POWERON:   return "POWERON";
+    case ESP_RST_SW:        return "SOFTWARE";
+    case ESP_RST_PANIC:     return "PANIC (crash)";
+    case ESP_RST_INT_WDT:   return "INTERRUPT WATCHDOG";
+    case ESP_RST_TASK_WDT:  return "TASK WATCHDOG";
+    case ESP_RST_WDT:       return "OTHER WATCHDOG";
+    case ESP_RST_BROWNOUT:  return "BROWNOUT (power supply too weak)";
+    default:                return "OTHER";
+  }
+}
+
 void setup() {
   Serial.begin(115200);
   delay(100);
+  Serial.printf("\nReset reason: %s\n", resetReasonStr(esp_reset_reason()));
 
   Serial.println("\n=============================================");
   Serial.println("   Nafasam Mini Quad - Flight Controller");
-  Serial.println("   Hardware: ESP32-S3 DroneFC PCB Rev A0");
+  Serial.println("   Hardware: ESP32 (custom pin map)");
   Serial.println("=============================================");
 
   // 1. Initialize motor PWM pins (immediate LOW state for MOSFET safety)
@@ -488,14 +535,25 @@ void setup() {
 
   // 3. Start WiFi Access Point
   WiFi.mode(WIFI_AP);
-  WiFi.softAP(AP_SSID, strlen(AP_PASSWORD) ? AP_PASSWORD : nullptr, AP_CHANNEL, 0, AP_MAX_CONN);
+  bool apOk = false;
+  for (int attempt = 1; attempt <= 3 && !apOk; attempt++) {
+    apOk = WiFi.softAP(AP_SSID, strlen(AP_PASSWORD) ? AP_PASSWORD : nullptr, AP_CHANNEL, 0, AP_MAX_CONN);
+    if (!apOk) {
+      Serial.printf("WiFi AP: start FAILED (attempt %d/3)\n", attempt);
+      delay(200);
+    }
+  }
   WiFi.setSleep(false); // Lowest latency Wi-Fi
 
-  Serial.print("WiFi AP started! SSID: \"");
-  Serial.print(AP_SSID);
-  Serial.print("\" | IP: http://");
-  Serial.print(WiFi.softAPIP());
-  Serial.println("/");
+  if (apOk) {
+    Serial.print("WiFi AP started! SSID: \"");
+    Serial.print(AP_SSID);
+    Serial.print("\" | IP: http://");
+    Serial.print(WiFi.softAPIP());
+    Serial.println("/");
+  } else {
+    Serial.println("WiFi AP: could NOT start. Check power supply and board settings.");
+  }
 
   // 4. Start HTTP Control Server on Core 1
   startWebServer();
@@ -519,7 +577,8 @@ void loop() {
   g_vbat = readBatteryVoltage();
 
   // Bench Diagnostics (printed at 2 Hz)
-  Serial.printf("[TELEM] Bat:%.2fV | IMU:%s | Arm:%s | Roll:%5.1f Pitch:%5.1f | M1:%.2f M2:%.2f M3:%.2f M4:%.2f\n",
+  Serial.printf("[TELEM] Clients:%d | Bat:%.2fV | IMU:%s | Arm:%s | Roll:%5.1f Pitch:%5.1f | M1:%.2f M2:%.2f M3:%.2f M4:%.2f\n",
+                WiFi.softAPgetStationNum(),
                 g_vbat,
                 g_imuOk ? "OK" : "NO",
                 g_armedActive ? "ARMED" : "DISARM",

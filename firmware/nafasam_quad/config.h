@@ -3,7 +3,8 @@
 
 // ============================================================================
 // Nafasam Mini Quad - Configuration & Hardware Pin Mapping
-// Target Hardware: ESP32-S3-MINI-1-N4R2, DroneFC PCB Revision A0
+// Original PCB target: ESP32-S3-MINI-1-N4R2, DroneFC PCB Revision A0
+// Pin map below is CUSTOMISED: motors 23/22/35/34, IMU 18/19/21
 // Coreless Brushed Motors: 8520 (3.7V nominal, 1S LiPo)
 // IMU: InvenSense MPU-6050 (QFN-24 bare chip on I2C address 0x68)
 // ============================================================================
@@ -15,24 +16,28 @@
 #define AP_MAX_CONN         4
 
 // ---------------- I2C & IMU (MPU-6050) ----------------
-// DroneFC PCB routing: IMU_SDA -> GPIO 33, IMU_SCL -> GPIO 34
-#define PIN_I2C_SDA         33
-#define PIN_I2C_SCL         34
-#define PIN_IMU_INT         21             // DroneFC IMU_INT
+// Custom wiring: IMU_SDA -> GPIO 18, IMU_SCL -> GPIO 19, IMU_INT -> GPIO 21
+#define PIN_I2C_SDA         18
+#define PIN_I2C_SCL         19
+#define PIN_IMU_INT         21             // IMU INT (defined, not used by the firmware)
 #define DRONE_IMU_I2C_ADDR  0x68           // MPU-6050 address
 #define I2C_FREQ_HZ         400000         // 400 kHz Fast Mode
 #define I2C_TIMEOUT_MS      10
 
 // ---------------- Motors (8520 Brushed Coreless) ----------------
 // Low-side AO3400A MOSFET switches on DroneFC PCB:
-// Motor 1 (J4): Front-Left  (FL) - Clockwise (CW)          -> GPIO 39 (PWM1)
-// Motor 2 (J5): Front-Right (FR) - Counter-Clockwise (CCW) -> GPIO 40 (PWM2)
-// Motor 3 (J6): Rear-Left   (RL) - Counter-Clockwise (CCW) -> GPIO 41 (PWM3)
-// Motor 4 (J7): Rear-Right  (RR) - Clockwise (CW)          -> GPIO 42 (PWM4)
-#define PIN_MOTOR_FL        39             // Motor 1 (J4)
-#define PIN_MOTOR_FR        40             // Motor 2 (J5)
-#define PIN_MOTOR_RL        41             // Motor 3 (J6)
-#define PIN_MOTOR_RR        42             // Motor 4 (J7)
+// Motor 1 (J4): Front-Left  (FL) - Clockwise (CW)          -> GPIO 23 (PWM1)
+// Motor 2 (J5): Front-Right (FR) - Counter-Clockwise (CCW) -> GPIO 22 (PWM2)
+// Motor 3 (J6): Rear-Left   (RL) - Counter-Clockwise (CCW) -> GPIO 35 (PWM3)
+// Motor 4 (J7): Rear-Right  (RR) - Clockwise (CW)          -> GPIO 34 (PWM4)
+//
+// NOTE: on the classic ESP32, GPIO 34..39 are INPUT-ONLY (no PWM/output), and on
+// the ESP32-S3 GPIO 22..25 do not exist. The firmware checks this at boot and
+// refuses to arm if a motor pin cannot drive an output.
+#define PIN_MOTOR_FL        23             // Motor 1 (J4)
+#define PIN_MOTOR_FR        22             // Motor 2 (J5)
+#define PIN_MOTOR_RL        35             // Motor 3 (J6)
+#define PIN_MOTOR_RR        34             // Motor 4 (J7)
 
 // ---------------- Motor PWM Settings ----------------
 // High frequency PWM (16 kHz) eliminates audible coil whine and drives 8520 motors efficiently
